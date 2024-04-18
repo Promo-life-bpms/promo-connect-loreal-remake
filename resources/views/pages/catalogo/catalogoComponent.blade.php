@@ -6,7 +6,7 @@
                     @if (
                          trim(strtoupper($categoria->family)) == 'CABALLERO' ||
                             $categoria->family == 'Boligrafos de Plastico' ||
-                            $categoria->family == 'ESCOLARES')
+                            $categoria->family == 'ESCOLARES' || $categoria->family == 'HOGAR')
                         @else
                         <a class="py-1 text-center sm:border-l sm:border-slate-700 sm:last:border-r sm:text-center sm:font-semibold hover:cursor-pointer hover:bg-slate-200 rounded-sm {{ $categoria->id == $category ? 'bg-slate-200' : '' }}"
                             wire:click="changeCategory({{ $categoria->id }})">

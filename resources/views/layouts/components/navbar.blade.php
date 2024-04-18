@@ -1,17 +1,17 @@
 <div  class="fixed top-0 left-0 right-0 z-50">
     
-    <nav class="w-full flex justify-between py-2 px-4 md:px-12 items-center flex-wrap bg-primary shadow-md mb-4" >
+    <nav class="w-full flex justify-between py-2 px-4 md:px-6 items-center flex-wrap bg-primary shadow-md  h-20" >
         <div class="w-full md:w-1/12 mb-2 md:mb-0">
             <a href="{{ route('index') }}">
                 <img src="{{asset('img/logo_loreal_white.png')}}"
-                    style="object-fit: cover;"
-                    alt="logo" class="w-30 p-2 ">
+                    style="object-fit: cover; width:120px;"
+                    alt="logo" class="p-2 ">
             </a>
         </div>
        
-        <div class="w-full md:w-1/12 mb-2 md:mb-0 text-white">
-           <a href="">Mis compras</a>
-           <svg width="20px" height="20px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <div class="w-full md:w-2/12 mb-2 md:mb-0 text-white flex items-center">
+            <a href="" class="mr-10">Mis compras</a>
+            <svg width="20px" height="20px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="mr-4">
                 <defs>
                     <style>.cls-1{fill:none;stroke:#FFFFFF;stroke-miterlimit:10;stroke-width:1.91px;}</style>
                 </defs>
@@ -28,7 +28,16 @@
             </svg>
 
         </div>
-
-       
+    </nav>
+    <nav class="w-full flex justify-center py-2 px-4 md:px-12 items-center flex-wrap bg-white shadow-md mb-4" style="height: 50px;">
+        <div class="w-full md:w-2/12 mb-2 md:mb-0">
+            <a href="">Catálogo</a>
+        </div>
+        <div class="w-full md:w-2/12 mb-2 md:mb-0">
+            <a href="">Promociones</a>
+        </div>
+        <div class="w-full md:w-2/12 mb-2 md:mb-0">
+            <a href="">Ofertas</a>
+        </div>
     </nav>
 </div>
