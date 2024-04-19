@@ -9,29 +9,105 @@
             </a>
         </div>
        
-        <div class="w-full md:w-2/12 mb-2 md:mb-0 text-white flex items-center">
-            <a href="" class="mr-10">Mis compras</a>
-            <a href="/carrito">
-                <svg width="20px" height="20px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="mr-4">
-                    <defs>
-                        <style>.cls-1{fill:none;stroke:#FFFFFF;stroke-miterlimit:10;stroke-width:1.91px;}</style>
-                    </defs>
-                    <g id="cart">
-                        <circle class="cls-1" cx="10.07" cy="20.59" r="1.91"/>
-                        <circle class="cls-1" cx="18.66" cy="20.59" r="1.91"/>
-                        <path class="cls-1" d="M.52,1.5H3.18a2.87,2.87,0,0,1,2.74,2L9.11,13.91H8.64A2.39,2.39,0,0,0,6.25,16.3h0a2.39,2.39,0,0,0,2.39,2.38h10"/>
-                        <polyline class="cls-1" points="7.21 5.32 22.48 5.32 22.48 7.23 20.57 13.91 9.11 13.91"/>
-                    </g> 
-                </svg>
-            </a>
-            
-            <a href="#">
-                <svg width="25px" height="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M11.713 7.14977C12.1271 7.13953 12.4545 6.79555 12.4443 6.38146C12.434 5.96738 12.0901 5.63999 11.676 5.65023L11.713 7.14977ZM6.30665 12.193H7.05665C7.05665 12.1874 7.05659 12.1818 7.05646 12.1761L6.30665 12.193ZM6.30665 14.51L6.34575 15.259C6.74423 15.2382 7.05665 14.909 7.05665 14.51H6.30665ZM6.30665 17.6L6.26755 18.349C6.28057 18.3497 6.29361 18.35 6.30665 18.35L6.30665 17.6ZM9.41983 18.35C9.83404 18.35 10.1698 18.0142 10.1698 17.6C10.1698 17.1858 9.83404 16.85 9.41983 16.85V18.35ZM10.9445 6.4C10.9445 6.81421 11.2803 7.15 11.6945 7.15C12.1087 7.15 12.4445 6.81421 12.4445 6.4H10.9445ZM12.4445 4C12.4445 3.58579 12.1087 3.25 11.6945 3.25C11.2803 3.25 10.9445 3.58579 10.9445 4H12.4445ZM11.713 5.65023C11.299 5.63999 10.955 5.96738 10.9447 6.38146C10.9345 6.79555 11.2619 7.13953 11.676 7.14977L11.713 5.65023ZM17.0824 12.193L16.3325 12.1761C16.3324 12.1818 16.3324 12.1874 16.3324 12.193H17.0824ZM17.0824 14.51H16.3324C16.3324 14.909 16.6448 15.2382 17.0433 15.259L17.0824 14.51ZM17.0824 17.6V18.35C17.0954 18.35 17.1084 18.3497 17.1215 18.349L17.0824 17.6ZM13.9692 16.85C13.555 16.85 13.2192 17.1858 13.2192 17.6C13.2192 18.0142 13.555 18.35 13.9692 18.35V16.85ZM10.1688 17.6027C10.1703 17.1885 9.83574 16.8515 9.42153 16.85C9.00732 16.8485 8.67034 17.1831 8.66886 17.5973L10.1688 17.6027ZM10.0848 19.3L10.6322 18.7873L10.6309 18.786L10.0848 19.3ZM13.3023 19.3L12.7561 18.786L12.7549 18.7873L13.3023 19.3ZM14.7182 17.5973C14.7167 17.1831 14.3797 16.8485 13.9655 16.85C13.5513 16.8515 13.2167 17.1885 13.2182 17.6027L14.7182 17.5973ZM9.41788 16.85C9.00366 16.85 8.66788 17.1858 8.66788 17.6C8.66788 18.0142 9.00366 18.35 9.41788 18.35V16.85ZM13.9692 18.35C14.3834 18.35 14.7192 18.0142 14.7192 17.6C14.7192 17.1858 14.3834 16.85 13.9692 16.85V18.35ZM11.676 5.65023C8.198 5.73622 5.47765 8.68931 5.55684 12.2099L7.05646 12.1761C6.99506 9.44664 9.09735 7.21444 11.713 7.14977L11.676 5.65023ZM5.55665 12.193V14.51H7.05665V12.193H5.55665ZM6.26755 13.761C5.0505 13.8246 4.125 14.8488 4.125 16.055H5.625C5.625 15.6136 5.95844 15.2792 6.34575 15.259L6.26755 13.761ZM4.125 16.055C4.125 17.2612 5.0505 18.2854 6.26755 18.349L6.34575 16.851C5.95843 16.8308 5.625 16.4964 5.625 16.055H4.125ZM6.30665 18.35H9.41983V16.85H6.30665V18.35ZM12.4445 6.4V4H10.9445V6.4H12.4445ZM11.676 7.14977C14.2917 7.21444 16.3939 9.44664 16.3325 12.1761L17.8322 12.2099C17.9114 8.68931 15.191 5.73622 11.713 5.65023L11.676 7.14977ZM16.3324 12.193V14.51H17.8324V12.193H16.3324ZM17.0433 15.259C17.4306 15.2792 17.764 15.6136 17.764 16.055H19.264C19.264 14.8488 18.3385 13.8246 17.1215 13.761L17.0433 15.259ZM17.764 16.055C17.764 16.4964 17.4306 16.8308 17.0433 16.851L17.1215 18.349C18.3385 18.2854 19.264 17.2612 19.264 16.055H17.764ZM17.0824 16.85H13.9692V18.35H17.0824V16.85ZM8.66886 17.5973C8.66592 18.4207 8.976 19.2162 9.53861 19.814L10.6309 18.786C10.335 18.4715 10.1673 18.0473 10.1688 17.6027L8.66886 17.5973ZM9.53739 19.8127C10.0977 20.4109 10.8758 20.7529 11.6935 20.7529V19.2529C11.2969 19.2529 10.9132 19.0873 10.6322 18.7873L9.53739 19.8127ZM11.6935 20.7529C12.5113 20.7529 13.2894 20.4109 13.8497 19.8127L12.7549 18.7873C12.4739 19.0873 12.0901 19.2529 11.6935 19.2529V20.7529ZM13.8484 19.814C14.4111 19.2162 14.7211 18.4207 14.7182 17.5973L13.2182 17.6027C13.2198 18.0473 13.0521 18.4715 12.7561 18.786L13.8484 19.814ZM9.41788 18.35H13.9692V16.85H9.41788V18.35Z" fill="#FFFFFF"/>
-                </svg>
-            </a>
-           
+        <div class="w-full md:w-4/12 mb-2 md:mb-0 text-white flex items-center">
+            <div>
+                @if (auth()->user())
+                    <div class="flex items-center">
+                        <button id="dropdownHoverButton" data-dropdown-toggle="dropdown"
+                            class="text-white focus:ring-4 focus:outline-none p-1 font-medium focus:rounded text-lg text-center inline-flex items-center"
+                            type="button">
+                            <p class="mr-10 text-base	 ">{{ (auth()->user()->name) }}</p>
+                        </button>
+                    </div>
+                @endif
 
+
+                <div id="dropdown"
+                class="z-40 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44  hover:">
+                <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownHoverButton">
+                    @role('buyers-manager')
+                        <li>
+                            <a href="{{ route('administrador') }}"
+                                class="w-full text-left text-base block px-4 py-2 hover:text-black hover:bg-stone-100">Administrador</a>
+                        </li>
+                    @endrole
+                    @role('seller')
+                        {{-- <li>
+                            <a href="{{ route('seller.content') }}"
+                                class="w-full text-left text-base block px-4 py-2 hover:text-black hover:bg-stone-50">Contenido</a>
+                        </li> --}}
+                    @endrole
+                    @role('admin')
+                        <li>
+                            <a href="{{ route('admin.dashboard') }}"
+                                class="w-full text-left text-base block px-4 py-2 hover:text-black hover:bg-stone-100">Administrador</a>
+                        </li>
+                    @endrole
+                    @role(['buyers-manager', 'buyer'])
+                        <li>
+                            <a href="{{ route('compras') }}"
+                                class="w-full text-left text-base block px-4 py-2 hover:text-black hover:bg-stone-100">Mis
+                                Compras</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('muestras') }}"
+                                class="w-full text-left text-base block px-4 py-2 hover:text-black hover:bg-stone-100">Mis
+                                Muestras</a>
+                        </li>
+                    @endrole
+
+                    @role('seller')
+                    
+                    <li>
+                        <a href="{{ route('seller.content') }}"
+                        class="w-full text-left text-base block px-4 py-2 hover:text-black hover:bg-stone-100">Banners</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('seller.compradores') }}"
+                        class="w-full text-left text-base block px-4 py-2 hover:text-black hover:bg-stone-100">Compradores</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('compras') }}"
+                        class="w-full text-left text-base block px-4 py-2 hover:text-black hover:bg-stone-100">Compras</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('special') }}"
+                        class="w-full text-left text-base block px-4 py-2 hover:text-black hover:bg-stone-100">Especiales</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('seller.muestras') }}"
+                        class="w-full text-left text-base block px-4 py-2 hover:text-black hover:bg-stone-100">Muestras</a>
+                    </li>
+                    
+                    @endrole
+
+                    <li>
+                        <button data-modal-target="popup-modal" data-modal-toggle="popup-modal"
+                            class="w-full text-left text-base block px-4 py-2 hover:text-black hover:bg-stone-100">Cerrar
+                            Sesion</button>
+                    </li>
+                </ul>
+            </div>
+            </div>
+
+            <div class="mr-10 -mt-3" style="width: 2rem">
+                @livewire('count-cart-quote')
+            </div>
+            <a href="#">
+                <svg width="25px" height="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="bg-black">
+                    <g clip-path="url(#clip0_15_159)">
+                    <rect width="24" height="24" />
+                    <path d="M9.5 19C8.89555 19 7.01237 19 5.61714 19C4.87375 19 4.39116 18.2177 4.72361 17.5528L5.57771 15.8446C5.85542 15.2892 6 14.6774 6 14.0564C6 13.2867 6 12.1434 6 11C6 9 7 5 12 5C17 5 18 9 18 11C18 12.1434 18 13.2867 18 14.0564C18 14.6774 18.1446 15.2892 18.4223 15.8446L19.2764 17.5528C19.6088 18.2177 19.1253 19 18.382 19H14.5M9.5 19C9.5 21 10.5 22 12 22C13.5 22 14.5 21 14.5 19M9.5 19C11.0621 19 14.5 19 14.5 19" stroke="#FFFFFF" stroke-linejoin="round"/>
+                    <path d="M12 5V3" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_15_159">
+                    <rect width="24" height="24" fill="none"/>
+                    </clipPath>
+                    </defs>
+                </svg>
+            </a>
+        
         </div>
     </nav>
     <nav class="w-full flex justify-center py-2 px-4 md:px-12 items-center flex-wrap bg-white shadow-md mb-4" style="height: 50px;">
@@ -45,4 +121,45 @@
             <a href="/catalogo">Ofertas</a>
         </div>
     </nav>
+
+    <div id="popup-modal" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+        <div class="relative w-full max-w-md max-h-full">
+        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+            <button type="button"
+                class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:"
+                data-modal-hide="popup-modal">
+                <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                        clip-rule="evenodd"></path>
+
+                </svg>
+                <span class="sr-only">Cerrar</span>
+            </button>
+            <div class="p-6 text-center">
+                <svg aria-hidden="true" class="mx-auto mb-4 text-gray-400 w-14 h-14 dark:text-gray-200"
+                    fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">¿Esta seguro de que desea
+                    salir del sitio?</h3>
+                <a class=" bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2 text-white"
+                    href="{{ route('logout') }}"
+                    onclick="event.preventDefault();
+                document.getElementById('logout-form').submit();">
+                    Si, estoy seguro</a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="hidden">
+                    @csrf
+                </form>
+                <button data-modal-hide="popup-modal" type="button"
+                    class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover: dark:hover:bg-gray-600 dark:focus:ring-gray-600">No,
+                    cancelar</button>
+            </div>
+        </div>
+    </div>
+    </div>
 </div>
+
+

@@ -10,14 +10,9 @@
     <div class="grid sm:grid-cols-7 grid-cols-1">
         <div class="sm:col-span-5 col-span-1 px-6">
             <div class="font-semibold text-slate-700 py-8 flex items-center space-x-2">
-                <div class="w-16">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
-                    </svg>
-                </div>
-
-                <p class="text-4xl">CARRITO</p>
+                <a class="text-secondary" href="/">Inicio</a>
+                <p class="text-secondary"> / </p>
+                <a class="text-secondary" href="#">Carrito de compras</a>
             </div>
 
 
@@ -29,22 +24,27 @@
                     <div
                         class="flex justify-between border-t last:border-b border-gray-800 py-3 px-5 gap-2 items-center">
                         <div class="flex items-center">
-                            <div style="width: 2rem">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                            </div>
                             <div>
                                 <img src="{{ $quote->images_selected ?: ($quote->product->firstImage ? $quote->product->firstImage->image_url : asset('img/default.jpg')) }}"
-                                    alt="" width="100">
+                                    alt="" style="width: 100px; height:100px; object-fit: contain;">
                             </div>
                         </div>
                         <div class="flex-grow space-y-3">
                             <p class="font-bold text-lg">{{ $quote->product->name }}</p>
                             <div class="flex items-center space-x-3">
-                                <p>Cantidad: <strong>{{ $quote->cantidad }}</strong> <span>PZ</span></p>
+                                <p>Cantidad: <strong>{{ $quote->cantidad }}</strong> <span>PZ</span>
+                                    <br>
+                                    <a data-modal-target="edit-modal-{{$quote->id}}" data-modal-toggle="edit-modal-{{$quote->id}}" class="text-primary text-xs underline rounded-sm cursor-pointer">
+                                        Editar piezas
+                                    </a>
+
+                                    <a  onclick='eliminar({{ $quote->id }})'
+                                        class="text-red-800 text-xs underline rounded-sm cursor-pointer m-4">
+                                        Eliminar del carrito
+                                    </a>
+                                </p>
+
+                              
                                 {{--        <input type="number" class="rounded-md border-gray-700 border text-center p-1 w-20"
                                     min="1" value="{{ $quote->cantidad }}"> --}}
                             </div>
@@ -89,9 +89,7 @@
                             @endphp
                             <p class="font-bold text-lg">$ {{ number_format($precioTotal, 2, '.', ',') }} + IVA</p>
                                 <!-- Modal toggle -->
-                                <button data-modal-target="edit-modal-{{$quote->id}}" data-modal-toggle="edit-modal-{{$quote->id}}" class=" bg-primary text-white block w-full text-center text-sm underline rounded-sm font-semibold py-2 px-4" type="button">
-                                    Editar cotización
-                                </button>
+                              
 
                                 <!-- Main modal -->
                                 <div wire:ignore.self id="edit-modal-{{$quote->id}}" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
@@ -118,7 +116,7 @@
                                                 </div>
                                                 <!-- Modal footer -->
                                                 <div class="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
-                                                    <button data-modal-hide="default-modal" type="submit" class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"  wire:click="updateQuote({{ $quote->id }})">Actualizar</button>
+                                                    <button data-modal-hide="default-modal" type="submit" class="text-white bg-primary hover:bg-primary focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"  wire:click="updateQuote({{ $quote->id }})">Actualizar</button>
                                                     <button data-modal-hide="default-modal" type="button" class="ms-3 text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">Cancelar</button>
                                                 </div>
                                          
@@ -148,10 +146,7 @@
                                     Solicitar Muestra
                                 </button>
                             @endif
-                            <button type="button" onclick='eliminar({{ $quote->id }})'
-                                class="block w-full text-center text-sm underline rounded-sm font-semibold py-1 px-4">
-                                Eliminar del carrito
-                            </button>
+                           
                         </div>
                     </div>
                 @endforeach

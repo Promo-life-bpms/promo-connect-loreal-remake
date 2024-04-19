@@ -1,5 +1,5 @@
-<div class="bg-gray-100">
-    <div class="w-full bg-white">
+<div class="bg-white">
+    {{-- <div class="w-full bg-white">
         <div class="container mx-auto py-2">
             <div class="grid grid-cols-1 sm:grid-cols-7 text-slate-700 " wire:target="changeCategory">
                 @foreach ($categories as $categoria)
@@ -16,155 +16,149 @@
                 @endforeach
             </div>
         </div>
-    </div>
+    </div> --}}
 
-
-    <div class="container mx-auto max-w-6xl px-2">
-        <div class="flex justify-center items-center mt-8 mb-8">
-            <p class="font-bold text-4xl"> Catálogo</p>
+    <div class="container mx-auto w-full px-2 mt-6">
+        <div class="font-semibold text-slate-700 py-8 flex items-center space-x-2">
+            <a class="text-secondary" href="/">Inicio</a>
+            <p class="text-secondary"> / </p>
+            <a class="text-secondary" href="#">Catálogo de productos</a>
         </div>
-        <div id="accordion-collapse" data-accordion="collapse" wire:ignore>
-            <h2 id="accordion-collapse-heading-3">
-                <button type="button" class="w-full bg-primary text-white justify-center flex py-1"
-                    data-accordion-target="#accordion-collapse-body-3" aria-expanded="false"
-                    aria-controls="accordion-collapse-body-3">
-                    <span>FILTRO DE BUSQUEDA</span>
-                    <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd"
-                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                            clip-rule="evenodd"></path>
-                    </svg>
-                </button>
-            </h2>
 
-            <div id="accordion-collapse-body-3" class="hidden" aria-labelledby="accordion-collapse-heading-3">
-                <div class="w-full bg-white">
-                    <div class="container mx-auto max-w-7xl p-2">
-                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 text-slate-700 gap-2">
-                            <div class="flex gap-1 items-center">
-                                <label for="name" class="text-slate-400 w-1/3">Nombre:</label>
-                                <input wire:model='nombre' type="text"
-                                    class="py-1 px-2 border border-slate-700 rounded w-full" name="search" id="search"
-                                    placeholder="Nombre">
-                            </div>
-                            <div class="flex gap-1 items-center">
-                                <label for="color" class="text-slate-400 w-1/3">Color:</label>
-                                <input wire:model='color' type="text"
-                                    class="py-1 px-2 border border-slate-700 rounded w-full" name="color" id="color"
-                                    placeholder="Color">
-                            </div>
-                            <div class="flex gap-1 items-center">
-                                <label for="piezas" class="text-slate-400 w-1/3">Piezas:</label>
-                                <div class="flex gap-1 items-center">
-                                    <input wire:model='stockMin' type="number"
-                                        class="py-1 px-2 border border-slate-700 rounded w-1/2" name="piezas"
-                                        id="piezas" placeholder="Max">
-                                    <input wire:model='stockMax' type="number"
-                                        class="py-1 px-2 border border-slate-700 rounded w-1/2" name="piezas1"
-                                        id="piezas1" placeholder="Min">
-                                </div>
-                            </div>
-                            <div class="flex gap-1 items-center">
-                                <label for="precio" class="text-slate-400 w-1/3">Precio:</label>
-                                <div class="flex gap-1 items-center">
-                                    <input wire:model='precioMin' type="number"
-                                        class="py-1 px-2 border border-slate-700 rounded w-1/2" name="precio1"
-                                        id="precio1" placeholder="Max">
-                                    <input wire:model='precioMax' type="number"
-                                        class="py-1 px-2 border border-slate-700 rounded w-1/2" name="precio"
-                                        id="precio" placeholder="Min">
-                                </div>
-                            </div>
+        <div class="flex w-full flex-col md:flex-row">
+            <div class="w-3/10 pr-20">
+                <div class="">
+            
+                    <div>
+                        <label for="name">Nombre:</label>
+                        <input wire:model='nombre' type="text"
+                            class="py-1 px-2 border border-slate-700 rounded w-full" name="search" id="search"
+                            placeholder="Nombre">
+                    </div>
+                    <br>
+                    <div>
+                        <label for="color">Color:</label>
+                        <input wire:model='color' type="text"
+                            class="py-1 px-2 border border-slate-700 rounded w-full" name="color" id="color"
+                            placeholder="Color">
+                    </div>
+                    <br>
+                    <div>
+                        <label for="piezas">Piezas:</label>
+                        <div class="flex gap-1">
+                            <input wire:model='stockMin' type="number"
+                                class="py-1 px-2 border border-slate-700 rounded w-2/5" name="piezas"
+                                id="piezas" placeholder="Max">
+                            <p class="w-1/5 text-center">  - a - </p>
+                            <input wire:model='stockMax' type="number"
+                                class="py-1 px-2 border border-slate-700 rounded w-1/3" name="piezas1"
+                                id="piezas1" placeholder="Min">
+                        </div>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="precio">Precio:</label>
+                        <div class="flex gap-1">
+                            <input wire:model='precioMin' type="number"
+                                class="py-1 px-2 border border-slate-700 rounded w-2/5" name="precio1"
+                                id="precio1" placeholder="Max">
+                            <p class="w-1/5 text-center">  - a - </p>
+                            <input wire:model='precioMax' type="number"
+                                class="py-1 px-2 border border-slate-700 rounded w-1/3" name="precio"
+                                id="precio" placeholder="Min">
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-
-        <div class="relative mt-8" wire:loading.class="opacity-40">
-            <div class="absolute top-5 w-full">
-                <div wire:loading.flex class="justify-center">
-                    <div class="sk-chase">
-                        <div class="sk-chase-dot"></div>
-                        <div class="sk-chase-dot"></div>
-                        <div class="sk-chase-dot"></div>
-                        <div class="sk-chase-dot"></div>
-                        <div class="sk-chase-dot"></div>
-                        <div class="sk-chase-dot"></div>
+            <div class="w-7/10">
+                <div class="relative mt-8" wire:loading.class="opacity-40">
+                    <div class="absolute top-5 w-full">
+                        <div wire:loading.flex class="justify-center">
+                            <div class="sk-chase">
+                                <div class="sk-chase-dot"></div>
+                                <div class="sk-chase-dot"></div>
+                                <div class="sk-chase-dot"></div>
+                                <div class="sk-chase-dot"></div>
+                                <div class="sk-chase-dot"></div>
+                                <div class="sk-chase-dot"></div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            @if (count($products) <= 0)
-                <div class="flex flex-wrap justify-center items-center flex-col  text-slate-700">
-                    <p>No hay resultados de busqueda en la pagina actual</p>
-                    @if (count($products->items()) == 0 && $products->currentPage() > 1)
-                        <p>Click en la paginacion para ver mas resultados</p>
+                    @if (count($products) <= 0)
+                        <div class="flex flex-wrap justify-center items-center flex-col  text-slate-700">
+                            <p>No hay resultados de busqueda en la pagina actual</p>
+                            @if (count($products->items()) == 0 && $products->currentPage() > 1)
+                                <p>Click en la paginacion para ver mas resultados</p>
+                            @endif
+                        </div>
                     @endif
-                </div>
-            @endif
-            <div class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-8 pb-8">
-                @foreach ($products as $row)
-                    <div class="w-full h-auto bg-white rounded-xl shadow-md overflow-hidden p-4">
-                        <div
-                            class="flex sm:block gap-2 sm:bg-transparent bg-white rounded-md sm:rounded-none p-2 sm:p-0">
-                            @php
-                                /* $priceProduct = $row->price;
-                                if ($row->producto_promocion) {
-                                    $priceProduct = round($priceProduct - $priceProduct * ($row->descuento / 100), 2);
-                                } else {
-                                    $priceProduct = round($priceProduct - $priceProduct * ($row->provider->discount / 100), 2);
-                                }
-                                $priceProduct = round($priceProduct / ((100 - $utilidad) / 100), 2); */
-
-                                if($row->provider_id == 1){
-                                    /* FOR PROMOTIONAL */
-                                    $priceProduct = ($row->price) * 0.93751;
-                                }else if($row->provider_id == 2){
-                                    /* PROMO OPCION */
-
-                                    $priceProduct = ($row->price) * 0.87502;
-                                }else if($row->provider_id == 3){
-                                    /* INNOVATION */
-                                    $priceProduct = ($row->price) * 1.2329;
-                                }else{
-                                    /* OTRO */
-                                    $priceProduct = ($row->price);
-                                }
-                                /* $priceProduct = round($row->price * 0.9375, 2); */
-                      
+                    <div class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 gap-8 pb-8">
+                        @foreach ($products as $row)
+                            <div class="w-full h-auto bg-white rounded-xl shadow-lg overflow-hidden p-4" style="border: 1px solid #d1d1d1;
+                            ">
+                                <div
+                                    class="flex sm:block gap-2 sm:bg-transparent bg-white rounded-md sm:rounded-none p-2 sm:p-0">
+                                    @php
+                                        /* $priceProduct = $row->price;
+                                        if ($row->producto_promocion) {
+                                            $priceProduct = round($priceProduct - $priceProduct * ($row->descuento / 100), 2);
+                                        } else {
+                                            $priceProduct = round($priceProduct - $priceProduct * ($row->provider->discount / 100), 2);
+                                        }
+                                        $priceProduct = round($priceProduct / ((100 - $utilidad) / 100), 2); */
+        
+                                        if($row->provider_id == 1){
+                                            /* FOR PROMOTIONAL */
+                                            $priceProduct = ($row->price) * 0.93751;
+                                        }else if($row->provider_id == 2){
+                                            /* PROMO OPCION */
+        
+                                            $priceProduct = ($row->price) * 0.87502;
+                                        }else if($row->provider_id == 3){
+                                            /* INNOVATION */
+                                            $priceProduct = ($row->price) * 1.2329;
+                                        }else{
+                                            /* OTRO */
+                                            $priceProduct = ($row->price);
+                                        }
+                                        /* $priceProduct = round($row->price * 0.9375, 2); */
                               
-                            @endphp
-                            <div class="w-full flex justify-center  sm:p-5 sm:bg-white  text-center">
-                                <div class="">
-                                    <img src="{{ $row->firstImage ? $row->firstImage->image_url : '' }}"
-                                        class="w-auto h-52" alt="{{ $row->name }}">
+                                      
+                                    @endphp
+                                    <div class="w-full flex justify-center  sm:p-5 sm:bg-white  text-center">
+                                        <div class="">
+                                            <img src="{{ $row->firstImage ? $row->firstImage->image_url : '' }}"
+                                                class="w-auto h-52" alt="{{ $row->name }}">
+                                        </div>
+                                    </div>
+                                    <div class="text-center flex-grow gap-2 flex flex-col justify-between sm:block">
+                                        <div class="py-2 text-lg text-slate-700">
+                                            <h5 class="capitalize m-0">
+                                                {{ Str::limit($row->name, 22, '...') }}</h5>
+                                            <p class="m-0">$
+                                                {{number_format($priceProduct,2)}}</p>
+                                        </div>
+                                        <a href="{{ route('show.product', ['product' => $row->id]) }}"
+                                            class="block w-full bg-primary hover:bg-primary-dark text-white text-center rounded-sm font-semibold py-2 rounded-xl">
+                                            Cotizar
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="text-center flex-grow gap-2 flex flex-col justify-between sm:block">
-                                <div class="py-2 text-lg text-slate-700">
-                                    <h5 class="capitalize font-bold m-0">
-                                        {{ Str::limit($row->name, 22, '...') }}</h5>
-                                    <p class="m-0 font-semibold">$
-                                        {{number_format($priceProduct,2)}}</p>
-                                </div>
-                                <a href="{{ route('show.product', ['product' => $row->id]) }}"
-                                    class="block w-full bg-primary hover:bg-primary-dark text-white text-center rounded-sm font-semibold py-2 rounded-xl">
-                                    Cotizar
-                                </a>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
-                @endforeach
+                </div>
+                <div class=" flex sm:hidden justify-center">
+                    {{ $products->onEachSide(0)->links() }}
+                </div>
+                <div class="hidden sm:flex justify-center">
+                    {{ $products->onEachSide(3)->links() }}
+                </div>
             </div>
         </div>
-        <div class=" flex sm:hidden justify-center">
-            {{ $products->onEachSide(0)->links() }}
-        </div>
-        <div class="hidden sm:flex justify-center">
-            {{ $products->onEachSide(3)->links() }}
-        </div>
+
+        
+        
         <br>
     </div>
     <style>
