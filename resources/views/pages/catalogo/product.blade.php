@@ -124,7 +124,7 @@
                     <p class="font-normal"><strong>Descripcion:</strong></p>
                     <p class="font-normal">{{ $product->description }}</p>
 
-                    <p class="font-normal"><strong>Stock:</strong> {{ $product->stock }} </p>
+                    <p class="font-normal"><strong>Stock:</strong> <strong>{{ $product->stock }}</strong>  </p>
 
                     @if (count($product->productCategories) > 0)
                         <strong>Categorias</strong>

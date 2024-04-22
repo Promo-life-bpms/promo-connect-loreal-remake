@@ -1,7 +1,7 @@
 <div  class="fixed top-0 left-0 right-0 z-50">
     
     <nav class="w-full flex justify-between py-2 px-4 md:px-6 items-center flex-wrap bg-primary shadow-md  h-20" >
-        <div class="w-full md:w-1/12 mb-2 md:mb-0">
+        <div class="w-full md:w-4/12 mb-2 md:mb-0">
             <a href="{{ route('index') }}">
                 <img src="{{asset('img/logo_loreal_white.png')}}"
                     style="object-fit: cover; width:120px;"
