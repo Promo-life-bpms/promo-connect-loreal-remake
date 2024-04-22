@@ -76,7 +76,7 @@ class CotizacionController extends Controller
             'jsantos@medix.com.mx',
         ];
 
-        $pdf = \PDF::loadView('pages.pdf.promolife', ['date' => $date, 'quotes' => $quotes]);
+        $pdf = \PDF::loadView('pages.pdf.quoteBH', ['date' => $date, 'quotes' => $quotes]);
         $pdf->setPaper('Letter', 'portrait');
         $filename = "Cotizacion.pdf";
         $pdf->save(public_path($filename));
