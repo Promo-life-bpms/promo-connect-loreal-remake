@@ -11,7 +11,7 @@
     </div> -->
     <div id="default-carousel" class="relative w-full text-center" data-carousel="slide" >
         <!-- Carousel wrapper -->
-        <div class="relative h-80 overflow-hidden  md:h-[32rem] mx-auto max-w-7xl">
+        <div class="relative h-100 overflow-hidden  md:h-[32rem] mx-auto max-w-7xl">
             @foreach ($banners as $item)
                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
                     <img src="{{ asset('storage/banners/' . $item->url_banner) }}"
