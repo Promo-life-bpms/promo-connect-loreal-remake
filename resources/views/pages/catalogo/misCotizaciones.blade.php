@@ -27,7 +27,11 @@
                 <p class="text-lg">¡Éxito! Se ha iniciado el proceso de compra de tu producto, puedes checar el proceso en la sección <b>MIS COMPRAS</b> .</p>
             </div>
         @endif
-        <h1 class=" mt-8 text-2xl font-semibold mb-8"> Mis Cotizaciones</h1> 
+        <div class="font-semibold text-slate-700 py-8 flex items-center space-x-2">
+            <a class="text-secondary" href="/">Inicio</a>
+            <p class="text-secondary"> / </p>
+            <a class="text-secondary" href="#">Mis cotizaciones</a>
+        </div>
 
         <div class="flex">
             <div class="w-1/2 mr-8">
@@ -58,7 +62,7 @@
         <div class="w-full">
             <table class="table-auto">
                 <thead>
-                    <tr class="bg-blue-900 text-white">
+                    <tr class="bg-primary text-white">
                         <th style="width:5%;">Cotizacion</th>
                         <th style="width:5%;">Logo</th>
                         <th style="width:10%;">Producto</th>
