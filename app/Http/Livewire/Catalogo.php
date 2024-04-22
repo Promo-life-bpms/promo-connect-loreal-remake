@@ -115,6 +115,7 @@ class Catalogo extends Component
                 $query->where('categories.id', $this->category);
             })
             ->select('products.*')
+            ->inRandomOrder()
             ->paginate(32);
 
       
