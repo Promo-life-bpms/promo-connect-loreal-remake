@@ -56,6 +56,8 @@
 
     </div>
 
+    
+
     <div class="container mx-auto max-w-7xl">
 
         <div class="flex mx-auto max-w-7xl py-8 mt-10">
@@ -203,5 +205,11 @@
             <img src="{{ asset('img/banner_premium.png') }}" alt="" class="block">
             <img src="{{ asset('img/text_pemium.png') }}" alt="" class="absolute inset-0 mx-auto my-auto" style="width:40%;">
         </div>
+
+
+
+       
     </div>
+
+
 @endsection

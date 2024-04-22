@@ -208,8 +208,8 @@
             <li>Condiciones de pago acordadas en el contrato</li>
             <li>Precios unitarios mostrados antes de IVA</li>
             <li>Precios mostrados en pesos mexicanos (MXP)</li>
-            <li>Una vez realizada la cotización, la entrega de los productos se realizará en un plazo estimado de 10 días hábiles.</li>
-            <li>Antes de generar la cotización, le invitamos a verificar la disponibilidad actual de stock para garantizar la prontitud en el cumplimiento de su pedido.</li>
+            <li>Una vez realizada la orden de compra, la entrega de los productos se realizará en un plazo estimado de 10 días hábiles.</li>
+            <li>Antes de generar la orden de compra, le invitamos a verificar la disponibilidad actual de stock para garantizar la prontitud en el cumplimiento de su pedido.</li>
         </ul>
     </div>
 
