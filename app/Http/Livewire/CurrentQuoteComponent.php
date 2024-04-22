@@ -318,7 +318,7 @@ class CurrentQuoteComponent extends Component
         Notification::route('mail', $correoDestino)
         ->notify(new SendEmailCotizationNotification($date, $quotes )); */
 
-        $pdf = \PDF::loadView('pages.pdf.promolife', ['date' => $date, 'quotes' => $quotes]);
+        $pdf = \PDF::loadView('pages.pdf.quoteBH', ['date' => $date, 'quotes' => $quotes]);
      
         /* $pdf = \PDF::loadView('pages.pdf.cotizacionBH', ['date' => $date, 'cotizacionActual' => $cotizacionActual, 'startQS' => $startQS]); */
         $pdf->setPaper('Letter', 'portrait');

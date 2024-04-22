@@ -27,23 +27,23 @@
         }
         
     </style> --}}
-
+{{-- 
     <header>
         <img src="quotesheet/pz/fondo-azul-superior.png" alt="" srcset="" class="fondo-head">
         <table class="head content">
             <tr>
                 <td rowspan="3"><img src="quotesheet/pz/logo.jpg" class="logo"></td>
-                <td colspan="6" class="company">PROMO ZALE S.A. DE C.V.</td>
+                <td colspan="6" class="company">BH TRADEMARKET S.A. DE C.V.</td>
             </tr>
             <tr>
                 <td style="text-align: left;" colspan="6" class="company-quote">Cotizacion</td>
             </tr>
         </table>
-    </header>
+    </header> --}}
 
     {{-- <img src="quotesheet/bh/triangulos.png" alt="" srcset="" class="fondo-head"> --}}
 
-    {{-- <header>
+    <header>
         
         <table style=" margin-bottom:16px;">
             <tr>
@@ -57,7 +57,7 @@
                 
                 <td style="text-align: left; width: 50%;">
                     <div style="margin-left:60px; display:flex;">
-                        <img src="img/logo-color.png" style="width: 120px;" >
+                        <img src="img/logo_loreal.png" style="width: 120px;" >
                     </div>
 
                     <p style="margin-left:60px; margin-top:28px;">Fecha: <b>{{$date}}</b></p>
@@ -65,9 +65,9 @@
                 </td>
             </tr>
         </table>
-    </header> --}}
+    </header>
 
-    {{-- <footer>
+    <footer>
         <table class="footer content">
             <tr>
                 <td colspan="3">
@@ -83,9 +83,9 @@
         <div style="text-align: right">
             <p class="content">Pagina <span class="pagenum"></span></p>
         </div>
-    </footer> --}}
+    </footer> 
 
-    <footer>
+    {{-- <footer>
         <table
             style="magin-bottom: 0mm; position: absolute; bottom: 22mm; z-index: 20; width: 100%; margin-left: -10px;">
             <tr>
@@ -105,7 +105,7 @@
                 </td>
             </tr>
         </table>
-    </footer>
+    </footer> --}}
     
     <div style="margin-left:30px; margin-right:30px; margin-top:8px;">
         
