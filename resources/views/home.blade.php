@@ -15,7 +15,7 @@
             @foreach ($banners as $item)
                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
                     <img src="{{ asset('storage/banners/' . $item->url_banner) }}"
-                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." style="z-index:1; object-fit: contain;">
+                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." style="z-index:1; object-fit: contain; !important">
                 </div>
             @endforeach
 
@@ -186,9 +186,9 @@
         <div class="max-w-7xl mx-auto flex justify-center mt-40 mb-40">
             <div class="flex w-1/3 justify-center mr-4">
                 <div class="w-full h-24 flex flex-col items-end justify-center">
-                    <p class="text-4xl text-secondary font-bold">Porque tú lo vales</p> 
+                    <p class="text-4xl text-secondary font-bold"></p> 
                     <div style="width: 100%;">
-                        <p class="text-right mt-10 text-2xl">50% de descuento en productos seleccionados del catálogo</p>
+                        <p class="text-right mt-10 text-2xl">Todos los productos en un solo lugar</p>
                     </div>
                 </div>
             </div>
