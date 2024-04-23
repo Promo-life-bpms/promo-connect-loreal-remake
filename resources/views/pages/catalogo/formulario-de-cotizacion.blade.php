@@ -388,9 +388,8 @@
         var logo1 = "{{asset('img/logo_loreal.png')}}";
         var logo2 = "{{asset('img/logo_loreal_white.png')}}";
 
-        if(imageURL.startsWith("https://catalogodeproductos.promolife.lat/")){
-            imageURL = imageURL.slice(41);
-        }
+        console.log(imageURL)
+       
         /* Identificadores */
         var selectedLogo1 = document.getElementById("logo1");
         var selectedLogo2 = document.getElementById("logo2");
@@ -450,8 +449,8 @@
                     });
                 });
             } else {
-                var proxyUrl = "/load-external-image?url=" + encodeURIComponent(imageURL);
-                fabric.Image.fromURL(proxyUrl, function (img) {
+                
+                fabric.Image.fromURL(imageURL, function (img) {
                     img.set({ crossOrigin: 'anonymous' });
                     canvas.setBackgroundImage(img, canvas.renderAll.bind(canvas), {
                         scaleX: canvas.width / img.width,
