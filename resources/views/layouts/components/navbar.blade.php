@@ -1,21 +1,23 @@
 <div  class="fixed top-0 left-0 right-0 z-50">
     
-    <nav class="w-full flex justify-between py-2 px-4 md:px-6 items-center flex-wrap bg-primary shadow-md  h-20" >
-        <a href="{{ route('index') }}">
-            <div class="w-full md:w-6/12 grid grid-cols-3 divide-x divide-white">
-                <div class="text-white"> 
+    <nav class="w-full flex justify-between py-2 px-4 md:px-6 items-center flex-wrap bg-primary shadow-md h-40 md:h-20">
+        <a href="{{ route('index') }}" class="mr-20">
+            <div class="w-full md:w-6/12 grid grid-cols-3 divide-x divide-white items-center">
+                <div class="text-white flex justify-end"> <!-- Alinea el contenido a la derecha -->
                     <img src="{{asset('img/LOGOCLEAN.png')}}"
-                        style="object-fit: cover; width:70px;"
-                        alt="logo" class="p-2 ">
+                        style="object-fit: contain; width:70px;"
+                        alt="logo" class="p-2">
                 </div>
                 
-                <div class="text-white">
+                <div class="flex justify-center"> <!-- Alinea el contenido al centro -->
+                    <p class="text-stone-200 mt-2"> |</p>
                     <img src="{{asset('img/logo_loreal_white.png')}}"
-                        style="object-fit: cover; width:160px;"
-                        alt="logo" class="p-2 mt-5 ml-4">
+                        style="object-fit: contain; width:160px;"
+                        alt="logo" class="p-2 mt-2 ml-2">
                 </div>
-                <div>            
-                    <p class="text-white p-2 mt-4 ml-4">#MyMarketPlace</p>
+                
+                <div class="flex justify-start"> <!-- Alinea el contenido a la izquierda -->
+                    <p class="text-white p-2 mt-2 ml-2">#MyMarketPlace</p>
                 </div>
             </div>
         </a>
@@ -127,15 +129,15 @@
         
         </div>
     </nav>
-    <nav class="w-full flex justify-center py-2 px-4 md:px-12 items-center flex-wrap bg-white shadow-md mb-4" style="height: 50px;">
-        <div class="w-full md:w-2/12 mb-2 md:mb-0">
-            <a href="/catalogo">Catálogo</a>
+    <nav class="w-full flex justify-center py-2 px-4 md:px-12 items-center bg-white shadow-md mb-4" style="height: 50px; overflow-x-auto;">
+        <div class="flex md:w-2/12 mb-2 md:mb-0">
+            <a href="/catalogo" class="mr-4">Catálogo</a>
         </div>
-        <div class="w-full md:w-2/12 mb-2 md:mb-0">
-            <a href="/catalogo">Promociones</a>
+        <div class="flex md:w-2/12 mb-2 md:mb-0">
+            <a href="/promociones" class="mr-4">Promociones</a>
         </div>
-        <div class="w-full md:w-2/12 mb-2 md:mb-0">
-            <a href="/catalogo">Ofertas</a>
+        <div class="flex md:w-2/12 mb-2 md:mb-0">
+            <a href="/ofertas" class="mr-4">Ofertas</a>
         </div>
     </nav>
 
