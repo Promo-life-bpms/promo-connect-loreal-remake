@@ -49,7 +49,7 @@
             <tr>
                 <td style="width: 50%;">
                     <div style="display:flex; margin-top:10px; margin-left: 30px;">
-                        <img src="img/bhtrade.png" style="width: 80px;" >
+                        <img src="img/LOGOBH.png" style="width: 240px;" >
                     </div>
                     <p style="margin-left:30px; margin-top:10px; "><b>BH Trademarket S.A. de C.V.</b> </p>
                     <p style="margin-left:30px;">San Andrés Atoto 155A Naucalpan de Juárez, Méx. C.P. 53550 Tel. +52(55) 6269 0017</p>
@@ -150,7 +150,7 @@
                 }
 
             @endphp
-
+            
                 <br>
                 <p style="margin-left:60px;">Cotizacion: <b>SQ-{{ $quote->id }}</b></p>
                 <table border="1" >
@@ -192,13 +192,12 @@
                     </tr>
                     <tr>
                         <td colspan="1"> {{ $product->cantidad}} piezas</td>
-                        <td colspan="1"> {{ $product->precio_unitario * 1.2}} mxn </td>
-                        <td colspan="1"> {{ $product->precio_total * 1.2 }} mxn </td>
+                        <td colspan="1"> $ {{ number_format($product->precio_unitario , 2, '.', ',') }} mxn </td>
+                        <td colspan="1"> $ {{ number_format($product->precio_total , 2, '.', ',') }} mxn </td>
                     </tr>
                 </table>
             <br>
         @endforeach
-          
            
     </div>
 
@@ -207,8 +206,8 @@
         <ul>
             <li>Condiciones de pago acordadas en el contrato</li>
             <li>Precios unitarios mostrados antes de IVA</li>
-            <li>Precios mostrados en pesos mexicanos (MXP)</li>
-            <li>Una vez realizada la orden de compra, la entrega de los productos se realizará en un plazo estimado de 10 días hábiles.</li>
+            <li>Precios mostrados en pesos mexicanos (MXN)</li>
+            <li>Una vez entregada la orden de compra y/o muestra física aprobada, la entrega de los productos se realizará en un plazo estimado de 10 días hábiles.</li>
             <li>Antes de generar la orden de compra, le invitamos a verificar la disponibilidad actual de stock para garantizar la prontitud en el cumplimiento de su pedido.</li>
         </ul>
     </div>
