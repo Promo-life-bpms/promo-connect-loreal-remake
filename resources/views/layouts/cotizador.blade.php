@@ -12,7 +12,7 @@ n<!doctype html>
     <title>
         @hasSection('title')
             @yield('title') |
-        @endif Loreal
+        @endif #MyMarketPlace
     </title>
 
     <!-- Fonts -->
