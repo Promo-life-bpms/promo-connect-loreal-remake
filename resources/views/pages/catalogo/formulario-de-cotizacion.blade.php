@@ -384,17 +384,18 @@
         var imageURL = "{{ $product->images != '[]'?  $product->images[0]->image_url : '' }}";
         var productID = "{{ $product->id }}";
 
+
+        if(imageURL.startsWith("https://catalogodeproductos.promolife.lat/")){
+            imageURL = imageURL.slice(41);
+        }
         /* Logos */
         var logo1 = "{{asset('img/logo_loreal.png')}}";
         var logo2 = "{{asset('img/logo_loreal_white.png')}}";
 
-        console.log(imageURL)
-       
         /* Identificadores */
         var selectedLogo1 = document.getElementById("logo1");
         var selectedLogo2 = document.getElementById("logo2");
       
-
         var logoSelect = document.getElementById("logos");
         
         var logoURL = document.getElementById("imageInput");
@@ -449,8 +450,8 @@
                     });
                 });
             } else {
-                
-                fabric.Image.fromURL(imageURL, function (img) {
+                var proxyUrl = "/load-external-image?url=" + encodeURIComponent(imageURL);
+                fabric.Image.fromURL(proxyUrl, function (img) {
                     img.set({ crossOrigin: 'anonymous' });
                     canvas.setBackgroundImage(img, canvas.renderAll.bind(canvas), {
                         scaleX: canvas.width / img.width,
