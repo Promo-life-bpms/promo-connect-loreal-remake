@@ -1,22 +1,66 @@
 <div class="bg-white">
-    {{-- <div class="w-full bg-white">
+    <div class="w-full bg-white">
         <div class="container mx-auto py-2">
-            <div class="grid grid-cols-1 sm:grid-cols-7 text-slate-700 " wire:target="changeCategory">
-                @foreach ($categories as $categoria)
-                    @if (
-                         trim(strtoupper($categoria->family)) == 'CABALLERO' ||
-                            $categoria->family == 'Boligrafos de Plastico' ||
-                            $categoria->family == 'ESCOLARES' || $categoria->family == 'HOGAR')
-                        @else
-                        <a class="py-1 text-center sm:border-l sm:border-slate-700 sm:last:border-r sm:text-center sm:font-semibold hover:cursor-pointer hover:bg-slate-200 rounded-sm {{ $categoria->id == $category ? 'bg-slate-200' : '' }}"
-                            wire:click="changeCategory({{ $categoria->id }})">
-                            {{ strtoupper($categoria->family) }}
-                        </a>
-                    @endif
-                @endforeach
+            <div class="grid grid-cols-1 sm:grid-cols-11 text-slate-700 " wire:target="changeCategory">
+            
+                <a class="py-1 text-center sm:border-l sm:border-slate-700 sm:last:border-r sm:text-center sm:font-semibold hover:cursor-pointer hover:bg-slate-200 rounded-sm bg-slate-200"
+                    wire:click="changeCategory({{ 1 }})">
+                    PPD Salon Tools
+                </a>
+
+                <a class="py-1 text-center sm:border-l sm:border-slate-700 sm:last:border-r sm:text-center sm:font-semibold hover:cursor-pointer hover:bg-slate-200 rounded-sm bg-slate-200"
+                    wire:click="changeCategory({{ 1 }})">
+                    Luggage & Trolley (no brand)
+                </a>
+
+                <a class="py-1 text-center sm:border-l sm:border-slate-700 sm:last:border-r sm:text-center sm:font-semibold hover:cursor-pointer hover:bg-slate-200 rounded-sm bg-slate-200"
+                    wire:click="changeCategory({{ 1 }})">
+                    Standard Bags and Pouches
+                </a>
+
+                <a class="py-1 text-center sm:border-l sm:border-slate-700 sm:last:border-r sm:text-center sm:font-semibold hover:cursor-pointer hover:bg-slate-200 rounded-sm bg-slate-200"
+                    wire:click="changeCategory({{ 1 }})">
+                    Professional Beauty & Make-up Tools
+                </a>
+
+                <a class="py-1 text-center sm:border-l sm:border-slate-700 sm:last:border-r sm:text-center sm:font-semibold hover:cursor-pointer hover:bg-slate-200 rounded-sm bg-slate-200"
+                    wire:click="changeCategory({{ 1 }})">
+                    Promotional jewelry & small metal accessories
+                </a>
+
+                <a class="py-1 text-center sm:border-l sm:border-slate-700 sm:last:border-r sm:text-center sm:font-semibold hover:cursor-pointer hover:bg-slate-200 rounded-sm bg-slate-200"
+                    wire:click="changeCategory({{ 1 }})">
+                    Standard/Customized electric devices (no brand)
+                </a>
+
+                <a class="py-1 text-center sm:border-l sm:border-slate-700 sm:last:border-r sm:text-center sm:font-semibold hover:cursor-pointer hover:bg-slate-200 rounded-sm bg-slate-200"
+                    wire:click="changeCategory({{ 1 }})">
+                    Standard gifts & accessories & stationary (from stock items)
+                </a>
+
+                <a class="py-1 text-center sm:border-l sm:border-slate-700 sm:last:border-r sm:text-center sm:font-semibold hover:cursor-pointer hover:bg-slate-200 rounded-sm bg-slate-200"
+                    wire:click="changeCategory({{ 1 }})">
+                    Promotional Towel Items & Bath Robes
+                </a>
+
+                <a class="py-1 text-center sm:border-l sm:border-slate-700 sm:last:border-r sm:text-center sm:font-semibold hover:cursor-pointer hover:bg-slate-200 rounded-sm bg-slate-200"
+                    wire:click="changeCategory({{ 1 }})">
+                    Tee-Shirt
+                </a>
+
+                <a class="py-1 text-center sm:border-l sm:border-slate-700 sm:last:border-r sm:text-center sm:font-semibold hover:cursor-pointer hover:bg-slate-200 rounded-sm bg-slate-200"
+                    wire:click="changeCategory({{ 1 }})">
+                    Others promotional textiles
+                </a>
+                
+                <a class="py-1 text-center sm:border-l sm:border-slate-700 sm:last:border-r sm:text-center sm:font-semibold hover:cursor-pointer hover:bg-slate-200 rounded-sm bg-slate-200"
+                    wire:click="changeCategory({{ 1 }})">
+                    Scarfs & sarongs
+                </a>
+                   
             </div>
         </div>
-    </div> --}}
+    </div> 
 
     <div class="container mx-auto w-full px-2 mt-6">
         <div class="font-semibold text-slate-700 py-8 flex items-center space-x-2">

@@ -2748,10 +2748,6 @@ input:checked + .toggle-bg {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.hover\:fill-white:hover {
-  fill: #ffffff;
-}
-
 .hover\:text-\[\#009CDE\]:hover {
   --tw-text-opacity: 1;
   color: rgb(0 156 222 / var(--tw-text-opacity));
@@ -3123,6 +3119,10 @@ input:checked + .toggle-bg {
 
   .sm\:grid-cols-7 {
     grid-template-columns: repeat(7, minmax(0, 1fr));
+  }
+
+  .sm\:grid-cols-11 {
+    grid-template-columns: repeat(11, minmax(0, 1fr));
   }
 
   .sm\:flex-row {
