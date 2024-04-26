@@ -1,67 +1,4 @@
 <div class="bg-white">
-    <div class="w-full bg-white">
-        <div class="container mx-auto py-2">
-            <div class="grid grid-cols-1 sm:grid-cols-11 text-slate-700 " wire:target="changeCategory">
-            
-                <a class="py-1 text-center sm:border-l sm:border-slate-700 sm:last:border-r sm:text-center sm:font-semibold hover:cursor-pointer hover:bg-slate-200 rounded-sm bg-slate-200"
-                    wire:click="changeCategory({{ 1 }})">
-                    PPD Salon Tools
-                </a>
-
-                <a class="py-1 text-center sm:border-l sm:border-slate-700 sm:last:border-r sm:text-center sm:font-semibold hover:cursor-pointer hover:bg-slate-200 rounded-sm bg-slate-200"
-                    wire:click="changeCategory({{ 1 }})">
-                    Luggage & Trolley (no brand)
-                </a>
-
-                <a class="py-1 text-center sm:border-l sm:border-slate-700 sm:last:border-r sm:text-center sm:font-semibold hover:cursor-pointer hover:bg-slate-200 rounded-sm bg-slate-200"
-                    wire:click="changeCategory({{ 1 }})">
-                    Standard Bags and Pouches
-                </a>
-
-                <a class="py-1 text-center sm:border-l sm:border-slate-700 sm:last:border-r sm:text-center sm:font-semibold hover:cursor-pointer hover:bg-slate-200 rounded-sm bg-slate-200"
-                    wire:click="changeCategory({{ 1 }})">
-                    Professional Beauty & Make-up Tools
-                </a>
-
-                <a class="py-1 text-center sm:border-l sm:border-slate-700 sm:last:border-r sm:text-center sm:font-semibold hover:cursor-pointer hover:bg-slate-200 rounded-sm bg-slate-200"
-                    wire:click="changeCategory({{ 1 }})">
-                    Promotional jewelry & small metal accessories
-                </a>
-
-                <a class="py-1 text-center sm:border-l sm:border-slate-700 sm:last:border-r sm:text-center sm:font-semibold hover:cursor-pointer hover:bg-slate-200 rounded-sm bg-slate-200"
-                    wire:click="changeCategory({{ 1 }})">
-                    Standard/Customized electric devices (no brand)
-                </a>
-
-                <a class="py-1 text-center sm:border-l sm:border-slate-700 sm:last:border-r sm:text-center sm:font-semibold hover:cursor-pointer hover:bg-slate-200 rounded-sm bg-slate-200"
-                    wire:click="changeCategory({{ 1 }})">
-                    Standard gifts & accessories & stationary (from stock items)
-                </a>
-
-                <a class="py-1 text-center sm:border-l sm:border-slate-700 sm:last:border-r sm:text-center sm:font-semibold hover:cursor-pointer hover:bg-slate-200 rounded-sm bg-slate-200"
-                    wire:click="changeCategory({{ 1 }})">
-                    Promotional Towel Items & Bath Robes
-                </a>
-
-                <a class="py-1 text-center sm:border-l sm:border-slate-700 sm:last:border-r sm:text-center sm:font-semibold hover:cursor-pointer hover:bg-slate-200 rounded-sm bg-slate-200"
-                    wire:click="changeCategory({{ 1 }})">
-                    Tee-Shirt
-                </a>
-
-                <a class="py-1 text-center sm:border-l sm:border-slate-700 sm:last:border-r sm:text-center sm:font-semibold hover:cursor-pointer hover:bg-slate-200 rounded-sm bg-slate-200"
-                    wire:click="changeCategory({{ 1 }})">
-                    Others promotional textiles
-                </a>
-                
-                <a class="py-1 text-center sm:border-l sm:border-slate-700 sm:last:border-r sm:text-center sm:font-semibold hover:cursor-pointer hover:bg-slate-200 rounded-sm bg-slate-200"
-                    wire:click="changeCategory({{ 1 }})">
-                    Scarfs & sarongs
-                </a>
-                   
-            </div>
-        </div>
-    </div> 
-
     <div class="container mx-auto w-full px-2 mt-6">
         <div class="font-semibold text-slate-700 py-8 flex items-center space-x-2">
             <a class="text-secondary" href="/">Inicio</a>
@@ -69,31 +6,47 @@
             <a class="text-secondary" href="#">Catálogo de productos</a>
         </div>
 
+        
         <div class="flex w-full flex-col md:flex-row">
-            <div class="w-3/10 pr-20">
-                <div class="">
-            
+            <style>
+                .container1 {
+                    width:400px;
+                    margin: 0; 
+                }
+
+                @media (max-width: 767px) {
+                    .container1 {
+                        width:100%;
+                        margin: 0; 
+                        padding: 0 0 10% 5%;
+                    }
+                }
+            </style>
+            <div class="container1" >
+                <div class="rounded-lg" style="border: 1px solid #bfbfbf; padding:20px;">
+                    <p class="text-xl font-semibold text-secondary">Filtros</p>
+                    <br>
                     <div>
-                        <label for="name">Nombre:</label>
+                        <label class="text-sm" for="name">Nombre:</label>
                         <input wire:model='nombre' type="text"
                             class="py-1 px-2 border border-slate-700 rounded w-full" name="search" id="search"
                             placeholder="Nombre">
                     </div>
                     <br>
                     <div>
-                        <label for="color">Color:</label>
+                        <label class="text-sm" for="color">Color:</label>
                         <input wire:model='color' type="text"
                             class="py-1 px-2 border border-slate-700 rounded w-full" name="color" id="color"
                             placeholder="Color">
                     </div>
                     <br>
                     <div>
-                        <label for="piezas">Piezas:</label>
+                        <label  class="text-sm" for="piezas">Piezas:</label>
                         <div class="flex gap-1">
                             <input wire:model='stockMin' type="number"
                                 class="py-1 px-2 border border-slate-700 rounded w-2/5" name="piezas"
                                 id="piezas" placeholder="Max">
-                            <p class="w-1/5 text-center">  - a - </p>
+                            <p class="w-1/5 text-center text-sm">  - a - </p>
                             <input wire:model='stockMax' type="number"
                                 class="py-1 px-2 border border-slate-700 rounded w-1/3" name="piezas1"
                                 id="piezas1" placeholder="Min">
@@ -101,20 +54,94 @@
                     </div>
                     <br>
                     <div>
-                        <label for="precio">Precio:</label>
+                        <label  class="text-sm" for="precio">Precio:</label>
                         <div class="flex gap-1">
                             <input wire:model='precioMin' type="number"
                                 class="py-1 px-2 border border-slate-700 rounded w-2/5" name="precio1"
                                 id="precio1" placeholder="Max">
-                            <p class="w-1/5 text-center">  - a - </p>
+                            <p class="w-1/5 text-center text-sm">  - a - </p>
                             <input wire:model='precioMax' type="number"
                                 class="py-1 px-2 border border-slate-700 rounded w-1/3" name="precio"
                                 id="precio" placeholder="Min">
                         </div>
                     </div>
+                    <br>
+                    <div>
+                        <label  class="text-sm">Categoría:</label>
+                        <div class="grid grid-cols-2 justify-center items-center mb-5">
+                            <div class="col-span-12">
+                                <a href="#" wire:click="changeCategory({{ 2 }})">
+                                    <span class="inline-block {{ $category == 2 ? 'bg-secondary' : 'bg-stone-700'}} hover:bg-stone-700 text-white px-1 py-1 font-semibold rounded-full my-2 mr-2" style="font-size: 10px;">
+                                        PPD Salon Tools
+                                    </span>
+                                </a>
+                    
+                                <a href="#" wire:click="changeCategory({{ 3 }})">
+                                    <span class="inline-block {{ $category == 3 ? 'bg-secondary' : 'bg-stone-700'}} hover:bg-stone-700 text-white px-2 py-1 font-semibold rounded-full my-2 mr-2" style="font-size: 10px;">
+                                        Luggage & Trolley (no brand)
+                                    </span>
+                                </a>
+                    
+                                <a href="#" wire:click="changeCategory({{ 4 }})">
+                                    <span class="inline-block {{ $category == 4 ? 'bg-secondary' : 'bg-stone-700'}} hover:bg-stone-700 text-white px-2 py-1 font-semibold rounded-full my-2 mr-2" style="font-size: 10px;">
+                                        Standard Bags and Pouches
+                                    </span>
+                                </a>
+                    
+                                <a href="#" wire:click="changeCategory({{ 5 }})">
+                                    <span class="inline-block {{ $category == 5 ? 'bg-secondary' : 'bg-stone-700'}} hover:bg-stone-700 text-white px-2 py-1 font-semibold rounded-full my-2 mr-2" style="font-size: 10px;">
+                                        Professional Beauty & Make-up Tools
+                                    </span>
+                                </a>
+                    
+                                <a href="#" wire:click="changeCategory({{ 6 }})">
+                                    <span class="inline-block {{ $category == 6 ? 'bg-secondary' : 'bg-stone-700'}} hover:bg-stone-700 text-white px-2 py-1 font-semibold rounded-full my-2 mr-2" style="font-size: 10px;">
+                                        Promotional jewelry & small metal accessories
+                                    </span>
+                                </a>
+                    
+                                <a href="#" wire:click="changeCategory({{ 7 }})">
+                                    <span class="inline-block {{ $category == 7 ? 'bg-secondary' : 'bg-stone-700'}} hover:bg-stone-700 text-white px-2 py-1 font-semibold rounded-full my-2 mr-2" style="font-size: 10px;">
+                                        Standard/Customized electric devices (no brand)
+                                    </span>
+                                </a>
+                    
+                                <a href="#" wire:click="changeCategory({{ 8 }})">
+                                    <span class="inline-block {{ $category == 8 ? 'bg-secondary' : 'bg-stone-700'}} hover:bg-stone-700 text-white px-2 py-1 font-semibold rounded-full my-2 mr-2" style="font-size: 10px;">
+                                        Standard gifts & accessories & stationary (from stock items)
+                                    </span>
+                                </a>
+                    
+                                <a href="#" wire:click="changeCategory({{ 9 }})">
+                                    <span class="inline-block {{ $category == 9 ? 'bg-secondary' : 'bg-stone-700'}} hover:bg-stone-700 text-white px-2 py-1 font-semibold rounded-full my-2 mr-2" style="font-size: 10px;">
+                                        Promotional Towel Items & Bath Robes
+                                    </span>
+                                </a>
+                    
+                                <a href="#" wire:click="changeCategory({{ 44 }})">
+                                    <span class="inline-block {{ $category == 44 ? 'bg-secondary' : 'bg-stone-700'}} hover:bg-stone-700 text-white px-2 py-1 font-semibold rounded-full my-2 mr-2" style="font-size: 10px;">
+                                        Tee-Shirt
+                                    </span>
+                                </a>
+                    
+                                <a href="#" wire:click="changeCategory({{ 11 }})">
+                                    <span class="inline-block {{ $category == 11 ? 'bg-secondary' : 'bg-stone-700'}} hover:bg-stone-700 text-white px-2 py-1 font-semibold rounded-full my-2 mr-2" style="font-size: 10px;">
+                                        Others promotional textiles
+                                    </span>
+                                </a>
+                    
+                                <a href="#" wire:click="changeCategory({{ 11 }})">
+                                    <span class="inline-block {{ $category == 11 ? 'bg-secondary' : 'bg-stone-700'}} hover:bg-stone-700 text-white px-2 py-1 font-semibold rounded-full my-2 mr-2" style="font-size: 10px;">
+                                        Scarfs & sarongs
+                                    </span>
+                                </a>
+                               
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="w-7/10">
+            <div class="w-full sm:w-full md:w-70 ml-10">
                 <div class="relative mt-8" wire:loading.class="opacity-40">
                     <div class="absolute top-5 w-full">
                         <div wire:loading.flex class="justify-center">
@@ -136,7 +163,7 @@
                             @endif
                         </div>
                     @endif
-                    <div class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 gap-8 pb-8">
+                    <div class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 gap-8 pb-8 -mt-8">
                         @foreach ($products as $row)
                             <div class="w-full h-auto bg-white rounded-xl shadow-lg overflow-hidden p-4" style="border: 1px solid #d1d1d1;
                             ">
