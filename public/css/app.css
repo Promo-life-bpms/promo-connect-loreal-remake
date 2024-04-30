@@ -1123,10 +1123,6 @@ input:checked + .toggle-bg {
   margin-left: 1rem;
   margin-right: 1rem;
 }
-.mx-6 {
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
-}
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -1444,9 +1440,6 @@ input:checked + .toggle-bg {
 }
 .w-4\/5 {
   width: 80%;
-}
-.w-40 {
-  width: 10rem;
 }
 .w-44 {
   width: 11rem;
@@ -2809,11 +2802,6 @@ input:checked + .toggle-bg {
 .hover\:text-stone-300:hover {
   --tw-text-opacity: 1;
   color: rgb(214 211 209 / var(--tw-text-opacity));
-}
-
-.hover\:text-white:hover {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .hover\:shadow-\[0_8px_9px_-4px_rgba\(59\2c 113\2c 202\2c 0\.3\)\2c 0_4px_18px_0_rgba\(59\2c 113\2c 202\2c 0\.2\)\]:hover {

@@ -1,14 +1,121 @@
 @extends('layouts.cotizador')
 
 @section('content')
-    <!-- <div class="container mx-auto max-w-7xl">
-        <div class="w-full bg-[#0047BB]">
-            <div class="flex justify-center">
-                <span class="text-center text-white">
-                </span>
-            </div>
-        </div>
-    </div> -->
+
+    <style>
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .img1, .img2, .img3, .img4, .img4, .img5, .img6, .img7, .img8, .img9, .img10, .img11{
+            width: 350px;
+            height: 250px;
+        }
+        .img1:hover{
+            background-image: url('{{ asset('img/loreal10.png') }}');
+            background-size: cover;
+            background-position: center;
+            filter: brightness(0.7);  
+            color: white; 
+        } 
+        .img1:hover{
+            background-image: url('{{ asset('img/loreal1.png') }}');
+            background-size: cover;
+            background-position: center;
+            filter: brightness(0.7);  
+            color: white; 
+        } 
+        .img2:hover{
+            background-image: url('{{ asset('img/loreal10.png') }}');
+            background-size: cover;
+            background-position: center;
+            filter: brightness(0.7);  
+            color: white; 
+        } 
+        .img3:hover{
+            background-image: url('{{ asset('img/loreal13.png') }}');
+            background-size: cover;
+            background-position: center;
+            filter: brightness(0.7);  
+            color: white; 
+        } 
+        .img4:hover{
+            background-image: url('{{ asset('img/loreal10.png') }}');
+            background-size: cover;
+            background-position: center;
+            filter: brightness(0.7);  
+            color: white; 
+        } 
+        .img5:hover{
+            background-image: url('{{ asset('img/loreal11.png') }}');
+            background-size: cover;
+            background-position: center;
+            filter: brightness(0.7);  
+            color: white; 
+        } 
+        .img6:hover{
+            background-image: url('{{ asset('img/loreal2.png') }}');
+            background-size: cover;
+            background-position: center;
+            filter: brightness(0.7);  
+            color: white; 
+        } 
+        .img7:hover{
+            background-image: url('{{ asset('img/loreal15.png') }}');
+            background-size: cover;
+            background-position: center;
+            filter: brightness(0.7);  
+            color: white; 
+        } 
+        .img8:hover{
+            background-image: url('{{ asset('img/loreal9.png') }}');
+            background-size: cover;
+            background-position: center;
+            filter: brightness(0.7);  
+            color: white; 
+        } 
+        .img9:hover{
+            background-image: url('{{ asset('img/loreal6.png') }}');
+            background-size: cover;
+            background-position: center;
+            filter: brightness(0.7);  
+            color: white; 
+        } 
+        .img10:hover{
+            background-image: url('{{ asset('img/loreal4.png') }}');
+            background-size: cover;
+            background-position: center;
+            filter: brightness(0.7);  
+            color: white; 
+        } 
+        .img11:hover {
+            background-image: url('{{ asset('img/loreal12.png') }}');
+            background-size: cover;
+            background-position: center;
+            filter: brightness(0.7);  
+            color: white; 
+        }
+        .swiper-pagination-bullet-active{
+            background: rgb(166 105 51);
+        }
+    </style>
     <div id="default-carousel" class="relative w-full text-center" data-carousel="slide" >
         <!-- Carousel wrapper -->
         <div class="relative h-80 overflow-hidden  md:h-[32rem] mx-auto max-w-7xl">
@@ -18,7 +125,6 @@
                         class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." style="z-index:1; object-fit: contain; !important">
                 </div>
             @endforeach
-
         </div>
 
         <!-- Slider indicators -->
@@ -55,9 +161,112 @@
         </button>
 
     </div>
+    <div class="max-h-40">
 
-    
 
+    </div>
+
+    <div class="flex mx-auto max-w-7xl py-8 mt-10">
+        <div style="width: 20px; height:38px;" class="bg-secondary"></div>
+        <p class="text-secondary pl-4 text-xl mt-2">Categorias</p>
+    </div>
+
+
+    <div class="container mx-auto max-w-7xl mt-10" style="height: 300px;"> 
+
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="{{ route('categoryfilter', ['category' => 27]) }}" class="transition-transform transform hover:scale-105 mb-10">
+                        <style>
+                            
+                        </style>
+                        <div class="bg-white shadow-lg flex flex-col items-center justify-center border border-black hover:bg-black hover:text-stone-300 img1" >
+                            <p class="font-bold mt-6 text-center">PPD Salon Tools</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="{{ route('categoryfilter', ['category' => 47]) }}" class="transition-transform transform hover:scale-105 mb-10">
+                        <div class="w-48 h-40 bg-white shadow-lg flex flex-col items-center justify-center border border-black hover:bg-black hover:text-stone-300 img3" >
+                            <p class="font-bold mt-6 text-center p-2">Standard Bags and Pouches </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="{{ route('categoryfilter', ['category' => 27]) }}" class="transition-transform transform hover:scale-105 mb-10">
+                        <div class="w-48 h-40 bg-white shadow-lg flex flex-col items-center justify-center border border-black hover:bg-black hover:text-stone-300 img4" >
+                            <p class="font-bold mt-6 text-center p-2">Professional Beauty & Make-up Tools </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="{{ route('categoryfilter', ['category' => 27]) }}" class="transition-transform transform hover:scale-105 mb-10">
+                        <div class="w-48 h-40 bg-white shadow-lg flex flex-col items-center justify-center border border-black hover:bg-black hover:text-stone-300 img5" >
+                            <p class="font-bold mt-6 text-center p-2">Promotional jewelry & small metal accessories </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="{{ route('categoryfilter', ['category' => 7]) }}" class="transition-transform transform hover:scale-105 mb-10">
+                        <div class="w-48 h-40 bg-white shadow-lg flex flex-col items-center justify-center border border-black hover:bg-black hover:text-stone-300 img6" >
+                            <p class="font-bold mt-6 text-center p-2">Standard/Customized electric devices (no brand)</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="{{ route('categoryfilter', ['category' => 8]) }}" class="transition-transform transform hover:scale-105 mb-10">
+                        <div class="w-48 h-40 bg-white shadow-lg flex flex-col items-center justify-center border border-black hover:bg-black hover:text-stone-300 img7" >
+                            <p class="font-bold mt-6 text-center p-2">Standard gifts & accessories & stationary (from stock items)</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="{{ route('categoryfilter', ['category' => 4]) }}" class="transition-transform transform hover:scale-105 mb-10">
+                        <div class="w-48 h-40 bg-white shadow-lg flex flex-col items-center justify-center border border-black hover:bg-black hover:text-stone-300 img8" >
+                            <p class="font-bold mt-6 text-center p-2">Promotional Towel Items & Bath Robes</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="{{ route('categoryfilter', ['category' => 44]) }}" class="transition-transform transform hover:scale-105 mb-10">
+                        <div class="w-48 h-40 bg-white shadow-lg flex flex-col items-center justify-center border border-black hover:bg-black hover:text-stone-300 img9" >
+                            <p class="font-bold mt-6 text-center p-2">Tee-Shirt </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="{{ route('categoryfilter', ['category' => 5]) }}" class="transition-transform transform hover:scale-105 mb-10">
+                        <div class="w-48 h-40 bg-white shadow-lg flex flex-col items-center justify-center border border-black hover:bg-black hover:text-stone-300 img10" >
+                            <p class="font-bold mt-6 text-center p-2">Others promotional textiles</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="swiper-slide">
+                    <a href="{{ route('categoryfilter', ['category' => 8]) }}" class="transition-transform transform hover:scale-105 mb-10">
+                        <div class="w-48 h-40 bg-white shadow-lg flex flex-col items-center justify-center border border-black hover:bg-black hover:text-stone-300 img11" >
+                            <p class="font-bold mt-6 text-center p-2">Scarfs & sarongs</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+          
+    </div>   
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          slidesPerView: 3,
+          spaceBetween: 30,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+        });
+    </script>
     <div class="container mx-auto max-w-7xl">
 
         <div class="flex mx-auto max-w-7xl py-8 mt-10">
@@ -73,242 +282,7 @@
                     </a>
                 @endforeach
             </div>
-        </div>
-        <div class="flex mx-auto max-w-7xl py-8 mt-10">
-            <div style="width: 20px; height:38px;" class="bg-secondary"></div>
-            <p class="text-secondary pl-4 text-xl mt-2">Navega por nuestras categorias</p>
-        </div>
-
-        <div class="container mx-auto max-w-7xl py-8 px-4">
-            <div class="grid grid-cols-5 gap-4">
-        
-                <a href="{{ route('categoryfilter', ['category' => 2]) }}" class="transition-transform transform hover:scale-105 mb-10">
-                    <style>
-                        .img1:hover {
-                            background-image: url('{{ asset('img/loreal1.png') }}');
-                            background-size: cover;
-                            background-position: center;
-                            filter: brightness(0.7);  
-                        }
-
-                        .img1:hover > * {
-                            color: white; 
-                        }
-                    </style>
-                    <div class="w-48 h-40 bg-white shadow-lg flex flex-col items-center justify-center border border-black hover:bg-black hover:text-stone-300 img1" >
-                        <p class="font-bold mt-6 text-center">PPD Salon Tools</p>
-                    </div>
-                </a>
-
-                <a href="{{ route('categoryfilter', ['category' => 3]) }}" class="transition-transform transform hover:scale-105 mb-10">
-                    <style>
-                        .img2:hover {
-                            background-image: url('{{ asset('img/loreal2.png') }}');
-                            background-size: cover;
-                            background-position: center;
-                            filter: brightness(0.7);  
-                        }
-
-                        .img2:hover > * {
-                            color: white; 
-                        }
-                    </style>
-                    <div class="w-48 h-40 bg-white shadow-lg flex flex-col items-center justify-center border border-black hover:bg-black hover:text-white img2" >
-                        <p class="font-bold mt-6 text-center p-2 ">Luggage & Trolley (no brand) </p>
-                    </div>
-                </a>
-
-                <a href="{{ route('categoryfilter', ['category' => 4]) }}" class="transition-transform transform hover:scale-105 mb-10">
-                    <style>
-                        .img3:hover {
-                            background-image: url('{{ asset('img/loreal3.png') }}');
-                            background-size: cover;
-                            background-position: center;
-                            filter: brightness(0.7);  
-                        }
-
-                        .img3:hover > * {
-                            color: white; 
-                        }
-                    </style>
-                    <div class="w-48 h-40 bg-white shadow-lg flex flex-col items-center justify-center border border-black hover:bg-black hover:text-stone-300 img3" >
-                        <p class="font-bold mt-6 text-center p-2">Standard Bags and Pouches </p>
-                    </div>
-                </a>
-                 
-
-                <a href="{{ route('categoryfilter', ['category' => 5]) }}" class="transition-transform transform hover:scale-105 mb-10">
-                    <style>
-                        .img4:hover {
-                            background-image: url('{{ asset('img/loreal4.png') }}');
-                            background-size: cover;
-                            background-position: center;
-                            filter: brightness(0.7);  
-                        }
-
-                        .img4:hover > * {
-                            color: white; 
-                        }
-                    </style>
-                    <div class="w-48 h-40 bg-white shadow-lg flex flex-col items-center justify-center border border-black hover:bg-black hover:text-stone-300 img4" >
-                        <p class="font-bold mt-6 text-center p-2">Professional Beauty & Make-up Tools </p>
-                    </div>
-                </a>
-
-                <a href="{{ route('categoryfilter', ['category' => 6]) }}" class="transition-transform transform hover:scale-105 mb-10">
-                    <style>
-                        .img5:hover {
-                            background-image: url('{{ asset('img/loreal5.png') }}');
-                            background-size: cover;
-                            background-position: center;
-                            filter: brightness(0.7);  
-                        }
-
-                        .img5:hover > * {
-                            color: white; 
-                        }
-                    </style>
-                    <div class="w-48 h-40 bg-white shadow-lg flex flex-col items-center justify-center border border-black hover:bg-black hover:text-stone-300 img5" >
-                        <p class="font-bold mt-6 text-center p-2">Promotional jewelry & small metal accessories </p>
-                    </div>
-                </a>
-
-
-                <a href="{{ route('categoryfilter', ['category' => 7]) }}" class="transition-transform transform hover:scale-105 mb-10">
-                    <style>
-                        .img6:hover {
-                            background-image: url('{{ asset('img/loreal6.png') }}');
-                            background-size: cover;
-                            background-position: center;
-                            filter: brightness(0.7);  
-                        }
-
-                        .img6:hover > * {
-                            color: white; 
-                        }
-                    </style>
-                    <div class="w-48 h-40 bg-white shadow-lg flex flex-col items-center justify-center border border-black hover:bg-black hover:text-stone-300 img6" >
-                        <p class="font-bold mt-6 text-center p-2">Standard/Customized electric devices (no brand)</p>
-                    </div>
-                </a>
-
-
-                <a href="{{ route('categoryfilter', ['category' => 8]) }}" class="transition-transform transform hover:scale-105 mb-10">
-                    <style>
-                        .img7:hover {
-                            background-image: url('{{ asset('img/loreal7.png') }}');
-                            background-size: cover;
-                            background-position: center;
-                            filter: brightness(0.7);  
-                        }
-
-                        .img7:hover > * {
-                            color: white; 
-                        }
-                    </style>
-                    <div class="w-48 h-40 bg-white shadow-lg flex flex-col items-center justify-center border border-black hover:bg-black hover:text-stone-300 img7" >
-                        <p class="font-bold mt-6 text-center p-2">Standard gifts & accessories & stationary (from stock items)</p>
-                    </div>
-                </a>
-
-
-                <a href="{{ route('categoryfilter', ['category' => 9]) }}" class="transition-transform transform hover:scale-105 mb-10">
-                    <style>
-                        .img8:hover {
-                            background-image: url('{{ asset('img/loreal8.png') }}');
-                            background-size: cover;
-                            background-position: center;
-                            filter: brightness(0.7);  
-                        }
-
-                        .img8:hover > * {
-                            color: white; 
-                        }
-                    </style>
-                    <div class="w-48 h-40 bg-white shadow-lg flex flex-col items-center justify-center border border-black hover:bg-black hover:text-stone-300 img8" >
-                        <p class="font-bold mt-6 text-center p-2">Promotional Towel Items & Bath Robes</p>
-                    </div>
-                </a>
-
-
-                <a href="{{ route('categoryfilter', ['category' => 44]) }}" class="transition-transform transform hover:scale-105 mb-10">
-                    <style>
-                        .img9:hover {
-                            background-image: url('{{ asset('img/loreal6.png') }}');
-                            background-size: cover;
-                            background-position: center;
-                            filter: brightness(0.7);  
-                        }
-
-                        .img9:hover > * {
-                            color: white; 
-                        }
-                    </style>
-                    <div class="w-48 h-40 bg-white shadow-lg flex flex-col items-center justify-center border border-black hover:bg-black hover:text-stone-300 img9" >
-                        <p class="font-bold mt-6 text-center p-2">Tee-Shirt </p>
-                    </div>
-                </a>
-
-                <a href="{{ route('categoryfilter', ['category' => 11]) }}" class="transition-transform transform hover:scale-105 mb-10">
-                    <style>
-                        .img10:hover {
-                            background-image: url('{{ asset('img/loreal10.png') }}');
-                            background-size: cover;
-                            background-position: center;
-                            filter: brightness(0.7);  
-                        }
-
-                        .img10:hover > * {
-                            color: white; 
-                        }
-                    </style>
-                    <div class="w-48 h-40 bg-white shadow-lg flex flex-col items-center justify-center border border-black hover:bg-black hover:text-stone-300 img10" >
-                        <p class="font-bold mt-6 text-center p-2">Others promotional textiles</p>
-                    </div>
-                </a>
-
-                <a href="{{ route('categoryfilter', ['category' => 12]) }}" class="transition-transform transform hover:scale-105 mb-10">
-                    <style>
-                        .img11:hover {
-                            background-image: url('{{ asset('img/loreal11.png') }}');
-                            background-size: cover;
-                            background-position: center;
-                            filter: brightness(0.7);  
-                        }
-
-                        .img11:hover > * {
-                            color: white; 
-                        }
-                    </style>
-                    <div class="w-48 h-40 bg-white shadow-lg flex flex-col items-center justify-center border border-black hover:bg-black hover:text-stone-300 img11" >
-                        <p class="font-bold mt-6 text-center p-2">Scarfs & sarongs</p>
-                    </div>
-                </a>
-                
-            </div>
-        </div>
-
-
-        <div class="flex mx-auto max-w-7xl py-8 mt-10">
-            <div style="width: 20px; height:38px;" class="bg-secondary"></div>
-            <p class="text-secondary pl-4 text-xl mt-2">Más productos</p>
-        </div>
-        <div class="container mx-auto max-w-7xl py-8 ">
-            <div class="flex flex-wrap justify-center">
-                @foreach ($moreProducts as $product)
-                    @if ($product->firstImage)
-                        <a href="{{ route('show.product', ['product' => $product->id]) }}" 
-                            class="max-h-40 w-auto text-center overflow-hidden mx-6">
-                            <img src="{{ $product->firstImage->image_url }}" alt="" srcset=""
-                                class="h-40 w-40 " style="object-fit: scale-down;">
-                        </a>
-                    @else
-                        <img src="{{ asset('/img/default.jpg') }}" alt="" srcset="" class="max-h-40 w-auto">
-                    @endif
-                @endforeach
-            </div>
-        </div>
-        
+        </div>  
 
         <div class="max-w-7xl mx-auto flex justify-center mt-40 mb-40">
             <div class="flex w-1/3 justify-center mr-4">
