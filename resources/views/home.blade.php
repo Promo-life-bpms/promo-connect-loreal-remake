@@ -178,11 +178,15 @@
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <a href="{{ route('categoryfilter', ['category' => 27]) }}" class="transition-transform transform hover:scale-105 mb-10">
-                        <style>
-                            
-                        </style>
                         <div class="bg-white shadow-lg flex flex-col items-center justify-center border border-black hover:bg-black hover:text-stone-300 img1" >
                             <p class="font-bold mt-6 text-center">PPD Salon Tools</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="{{ route('categoryfilter', ['category' => 47]) }}" class="transition-transform transform hover:scale-105 mb-10">
+                        <div class="w-48 h-40 bg-white shadow-lg flex flex-col items-center justify-center border border-black hover:bg-black hover:text-stone-300 img3" >
+                            <p class="font-bold mt-6 text-center p-2">Luggage & Trolley (no brand)</p>
                         </div>
                     </a>
                 </div>

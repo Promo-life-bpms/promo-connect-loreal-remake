@@ -70,32 +70,32 @@
                         <label  class="text-sm">Categoría:</label>
                         <div class="grid grid-cols-2 justify-center items-center mb-5">
                             <div class="col-span-12">
-                                <a href="#" wire:click="changeCategory({{ 2 }})">
-                                    <span class="inline-block {{ $category == 2 ? 'bg-secondary' : 'bg-stone-700'}} hover:bg-stone-700 text-white px-1 py-1 font-semibold rounded-full my-2 mr-2" style="font-size: 10px;">
+                                <a href="#" wire:click="changeCategory({{ 27 }})">
+                                    <span class="inline-block {{ $category == 27 ? 'bg-secondary' : 'bg-stone-700'}} hover:bg-stone-700 text-white px-1 py-1 font-semibold rounded-full my-2 mr-2" style="font-size: 10px;">
                                         PPD Salon Tools
                                     </span>
                                 </a>
                     
-                                <a href="#" wire:click="changeCategory({{ 3 }})">
-                                    <span class="inline-block {{ $category == 3 ? 'bg-secondary' : 'bg-stone-700'}} hover:bg-stone-700 text-white px-2 py-1 font-semibold rounded-full my-2 mr-2" style="font-size: 10px;">
+                                <a href="#" wire:click="changeCategory({{ 47 }})">
+                                    <span class="inline-block {{ $category == 47 ? 'bg-secondary' : 'bg-stone-700'}} hover:bg-stone-700 text-white px-2 py-1 font-semibold rounded-full my-2 mr-2" style="font-size: 10px;">
                                         Luggage & Trolley (no brand)
                                     </span>
                                 </a>
                     
-                                <a href="#" wire:click="changeCategory({{ 4 }})">
-                                    <span class="inline-block {{ $category == 4 ? 'bg-secondary' : 'bg-stone-700'}} hover:bg-stone-700 text-white px-2 py-1 font-semibold rounded-full my-2 mr-2" style="font-size: 10px;">
+                                <a href="#" wire:click="changeCategory({{ 47 }})">
+                                    <span class="inline-block {{ $category == 47 ? 'bg-secondary' : 'bg-stone-700'}} hover:bg-stone-700 text-white px-2 py-1 font-semibold rounded-full my-2 mr-2" style="font-size: 10px;">
                                         Standard Bags and Pouches
                                     </span>
                                 </a>
                     
-                                <a href="#" wire:click="changeCategory({{ 5 }})">
-                                    <span class="inline-block {{ $category == 5 ? 'bg-secondary' : 'bg-stone-700'}} hover:bg-stone-700 text-white px-2 py-1 font-semibold rounded-full my-2 mr-2" style="font-size: 10px;">
+                                <a href="#" wire:click="changeCategory({{ 27 }})">
+                                    <span class="inline-block {{ $category == 27 ? 'bg-secondary' : 'bg-stone-700'}} hover:bg-stone-700 text-white px-2 py-1 font-semibold rounded-full my-2 mr-2" style="font-size: 10px;">
                                         Professional Beauty & Make-up Tools
                                     </span>
                                 </a>
                     
-                                <a href="#" wire:click="changeCategory({{ 6 }})">
-                                    <span class="inline-block {{ $category == 6 ? 'bg-secondary' : 'bg-stone-700'}} hover:bg-stone-700 text-white px-2 py-1 font-semibold rounded-full my-2 mr-2" style="font-size: 10px;">
+                                <a href="#" wire:click="changeCategory({{ 27 }})">
+                                    <span class="inline-block {{ $category == 27 ? 'bg-secondary' : 'bg-stone-700'}} hover:bg-stone-700 text-white px-2 py-1 font-semibold rounded-full my-2 mr-2" style="font-size: 10px;">
                                         Promotional jewelry & small metal accessories
                                     </span>
                                 </a>
@@ -112,8 +112,8 @@
                                     </span>
                                 </a>
                     
-                                <a href="#" wire:click="changeCategory({{ 9 }})">
-                                    <span class="inline-block {{ $category == 9 ? 'bg-secondary' : 'bg-stone-700'}} hover:bg-stone-700 text-white px-2 py-1 font-semibold rounded-full my-2 mr-2" style="font-size: 10px;">
+                                <a href="#" wire:click="changeCategory({{ 4 }})">
+                                    <span class="inline-block {{ $category == 4 ? 'bg-secondary' : 'bg-stone-700'}} hover:bg-stone-700 text-white px-2 py-1 font-semibold rounded-full my-2 mr-2" style="font-size: 10px;">
                                         Promotional Towel Items & Bath Robes
                                     </span>
                                 </a>
@@ -124,14 +124,14 @@
                                     </span>
                                 </a>
                     
-                                <a href="#" wire:click="changeCategory({{ 11 }})">
-                                    <span class="inline-block {{ $category == 11 ? 'bg-secondary' : 'bg-stone-700'}} hover:bg-stone-700 text-white px-2 py-1 font-semibold rounded-full my-2 mr-2" style="font-size: 10px;">
+                                <a href="#" wire:click="changeCategory({{ 5 }})">
+                                    <span class="inline-block {{ $category == 5 ? 'bg-secondary' : 'bg-stone-700'}} hover:bg-stone-700 text-white px-2 py-1 font-semibold rounded-full my-2 mr-2" style="font-size: 10px;">
                                         Others promotional textiles
                                     </span>
                                 </a>
                     
-                                <a href="#" wire:click="changeCategory({{ 11 }})">
-                                    <span class="inline-block {{ $category == 11 ? 'bg-secondary' : 'bg-stone-700'}} hover:bg-stone-700 text-white px-2 py-1 font-semibold rounded-full my-2 mr-2" style="font-size: 10px;">
+                                <a href="#" wire:click="changeCategory({{ 8 }})">
+                                    <span class="inline-block {{ $category == 8 ? 'bg-secondary' : 'bg-stone-700'}} hover:bg-stone-700 text-white px-2 py-1 font-semibold rounded-full my-2 mr-2" style="font-size: 10px;">
                                         Scarfs & sarongs
                                     </span>
                                 </a>
