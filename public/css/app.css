@@ -2569,6 +2569,16 @@ input:checked + .toggle-bg {
     src: url('/fonts/ZillaSlab-Bold.ttf') format('truetype');
 }
 
+
+@font-face {
+    font-family: 'DINPro-Light';
+    src: url('/fonts/DINPro-Light/DINPro-Light.otf') format('truetype');
+}
+
+body {
+    font-family: 'DINPro-Light', sans-serif;
+}
+
 .file\:mr-4::file-selector-button {
   margin-right: 1rem;
 }
@@ -3459,3 +3469,4 @@ input:checked + .toggle-bg {
     line-height: 2.5rem;
   }
 }
+
