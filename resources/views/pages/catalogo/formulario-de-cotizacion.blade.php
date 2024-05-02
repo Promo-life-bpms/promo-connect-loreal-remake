@@ -205,8 +205,13 @@
 
                                     <div class="grid grid-cols-3 gap-4">
                                         <select id="logos" name="logos" class=" mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" style="width: 210px;">
-                                            <option value="logo_loreal.png">LOGO</option>
-                                            <option value="logo_loreal_white.png">LOGO BLANCO</option>
+                                            <option value="LOGO_CERAVE_AZUL.png">LOGO CERAVE AZUL V1</option>
+                                            <option value="LOGO_CERAVE_AZUL2.png">LOGO CERAVE AZUL V2</option>
+                                            <option value="LOGO_CERAVE_AZUL3.png">LOGO CERAVE AZUL V3</option>
+                                            <option value="LOGO_CERAVE_BLANCO.png">LOGO CERAVE BLANCO</option>
+                                            <option value="LOGO_CERAVE_NEGRO.png">LOGO CERAVE NEGRO</option>
+                                            <option value="LOGO_CERAVE_VERDE.png">LOGO CERAVE VERDE V1</option>
+                                            <option value="LOGO_CERAVE_VERDE2.png">LOGO CERAVE VERDE V2</option>
                                         </select>
                                     </div>
                                     
@@ -389,8 +394,13 @@
             imageURL = imageURL.slice(41);
         }
         /* Logos */
-        var logo1 = "{{asset('img/logo_loreal.png')}}";
-        var logo2 = "{{asset('img/logo_loreal_white.png')}}";
+        var logo1 = "{{asset('img/LOGO_CERAVE_AZUL.png')}}";
+        var logo2 = "{{asset('img/LOGO_CERAVE_AZUL2.png')}}";
+        var logo3 = "{{asset('img/LOGO_CERAVE_AZUL3.png')}}";
+        var logo4 = "{{asset('img/LOGO_CERAVE_BLANCO.png')}}";
+        var logo5 = "{{asset('img/LOGO_CERAVE_NEGRO.png')}}";
+        var logo6 = "{{asset('img/LOGO_CERAVE_VERDE.png')}}";
+        var logo7 = "{{asset('img/LOGO_CERAVE_VERDE2.png')}}";
 
         /* Identificadores */
         var selectedLogo1 = document.getElementById("logo1");
@@ -461,7 +471,6 @@
             }
 
 
-
             /* Evento para agregar imagenes desde input (deshabilitado si no esta el boton de logo personalizado) */
            /*  imageInput.addEventListener("change", function (event) {
                 var file = event.target.files[0];
@@ -504,7 +513,7 @@
                     textObject = new fabric.Text(textInput, {
                         left: 50,
                         top: 50,
-                        fontFamily: 'Sans-  ',
+                        fontFamily: 'Sans-Serif',
                         fontSize: 20,
                         fill: 'black'
                     });
