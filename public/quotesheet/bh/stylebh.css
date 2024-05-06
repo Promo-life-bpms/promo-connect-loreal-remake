@@ -48,7 +48,6 @@ header {
     left: 0px;
     right: 0px;
     height: 140px;
-    background-image: url(../bh//triangulos.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center right;
@@ -60,7 +59,6 @@ footer {
     left: 0px;
     right: 0px;
     height: 120px;
-    background-image: url(../bh//triangulos1.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center left;

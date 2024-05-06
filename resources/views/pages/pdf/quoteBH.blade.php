@@ -9,103 +9,48 @@
 </head>
 
 <body>
-  {{--   <style>
-      
-        table {
-            font-family: arial, sans-serif;
-            border-collapse: collapse;
-            width: 100%;
-        } 
-
-        th{
-            background-color: black;
-            color: white;
-            text-align: center;
-            font-size: 17px;
-            font-weight: bold;
-            border-color: #006EAD;
-        }
-        
-    </style> --}}
-{{-- 
+  
     <header>
-        <img src="quotesheet/pz/fondo-azul-superior.png" alt="" srcset="" class="fondo-head">
-        <table class="head content">
-            <tr>
-                <td rowspan="3"><img src="quotesheet/pz/logo.jpg" class="logo"></td>
-                <td colspan="6" class="company">BH TRADEMARKET S.A. DE C.V.</td>
-            </tr>
-            <tr>
-                <td style="text-align: left;" colspan="6" class="company-quote">Cotizacion</td>
-            </tr>
-        </table>
-    </header> --}}
+        <img src="img/header.png" alt="logo" style="width: 100%; z-index:1; position:absolute;">
+        <p style="margin-left:652px; margin-top:72px; z-index:2; color:#FFFFFF; font-size:12px;"><b>QS-001</b></p>
 
-    {{-- <img src="quotesheet/bh/triangulos.png" alt="" srcset="" class="fondo-head"> --}}
-
-    <header>
-        
-        <table style=" margin-bottom:16px;">
-            <tr>
-                <td style="width: 50%;">
-                    <div style="display:flex; margin-top:10px; margin-left: 30px;">
-                        <img src="img/LOGOBH.png" style="width: 240px;" >
-                    </div>
-                    <p style="margin-left:30px; margin-top:10px; "><b>BH Trademarket S.A. de C.V.</b> </p>
-                    <p style="margin-left:30px;">San Andrés Atoto 155A Naucalpan de Juárez, Méx. C.P. 53550 Tel. +52(55) 6269 0017</p>
-                </td>
-                
-                <td style="text-align: left; width: 50%;">
-                    <div style="margin-left:60px; display:flex;">
-                        <img src="img/logo_loreal.png" style="width: 120px;" >
-                    </div>
-
-                    <p style="margin-left:60px; margin-top:28px;">Fecha: <b>{{$date}}</b></p>
-                    <p style="margin-left:60px;"></p>
-                </td>
-            </tr>
-        </table>
+        <p style="margin-left:672px; margin-top:2px; z-index:2; color:#FFFFFF; font-size:12px;"><b>{{$date}}</b></p>
+        <img src="img/logo_loreal.png" alt="loreal" style="width: 80px; z-index:4; margin-top:60px; margin-left:50px;">
+        {{-- <div style="z-index:4; margin-top:20px;">
+            <center>
+                <span style="display: inline; margin-right:30px;">Vendedor: Daniel Levy Hano    </span>
+                <span style="display: inline; margin-right:30px;">5530395106   </span>
+                <span style="display: inline; margin-right:30px;">daniel@trademarket.com.mx    </span>
+            </center>
+        </div> --}}
+       
     </header>
 
-    <footer>
+    <footer style="margin-top: -40px;">
         <table class="footer content">
             <tr>
                 <td colspan="3">
-                    <center style="font-size: 20px; margin-bottom:5px;"><b>trademarket.com.mx</b></center>
+                    <center  style="font-size: 20px; margin-bottom:5px; padding-right:230px; padding-left:230px;">
+
+                        <div style=" background-color:#03FB99; border-radius: 10px; ">
+                            <img src="img/world.png" alt="" style="width:15px; heigth:15px;">
+                            <b>
+                                <a style="text-decoration: none; color:black; font-size:18px;" href="https://trademarket.com.mx/">TRADEMARKET.COM.MX</a>
+                            </b>
+                        </div>
+                        
+                    </center>
                 
-                <center style="font-size:12px;">San Andrés Atoto 155A Naucalpan de
-                    Juárez, Méx. C.P. 53550
-                    Tel. +52(55) 6269 0017</center>
+                <center style="font-size:12px; margin-top:10px;"><b>San Andrés Atoto 155A Naucalpan de Juárez, Mex. C.P. 53550 Tel: (55) 5290 9100</b> </center>
             </td>
             </tr>
             
         </table>
-        <div style="text-align: right">
+        <div style="text-align: right; margin-top:-20px;">
             <p class="content">Pagina <span class="pagenum"></span></p>
         </div>
     </footer> 
 
-    {{-- <footer>
-        <table
-            style="magin-bottom: 0mm; position: absolute; bottom: 22mm; z-index: 20; width: 100%; margin-left: -10px;">
-            <tr>
-                <td>
-                    <img src="quotesheet/pz/fondo-azul-inferior.png" />
-                </td>
-            </tr>
-        </table>
-
-        <table style="magin-bottom: 0mm; position: absolute; bottom: 60px; z-index:100;" class="content">
-            <tr>
-                <td>
-                    <p style="font-size: 12px; margin-left:3px; color:#fff;">Pagina <span class="pagenum"></span> </p>
-                    <br>
-                    <p style="font-size: 12px; margin-left:3px; color:#fff; text-transform: uppercase">San Andr&#233;s
-                        Atoto 155, San Est&#233;ban, Naucalpan, Edo. Méx. C.P. 53550 <br></p>
-                </td>
-            </tr>
-        </table>
-    </footer> --}}
     
     <div style="margin-left:30px; margin-right:30px; margin-top:8px;">
         

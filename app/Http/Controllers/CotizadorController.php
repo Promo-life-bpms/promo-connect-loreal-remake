@@ -526,7 +526,7 @@ class CotizadorController extends Controller
         $createQuoteInformation->oportunity = 'Oportunidad';
         $createQuoteInformation->rank = '1';
         $createQuoteInformation->department = 'Departamento';
-        $createQuoteInformation->information = strtoupper($request->oc);
+        $createQuoteInformation->information = '';
         $createQuoteInformation->tax_fee = 0;
         $createQuoteInformation->shelf_life = 10;
         $createQuoteInformation->save();
