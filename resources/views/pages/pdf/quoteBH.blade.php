@@ -51,8 +51,7 @@
         </div>
     </footer> 
 
-    
-    <div style="margin-left:30px; margin-right:30px; margin-top:8px;">
+    <div style="margin-left:30px; margin-right:30px; margin-top:8px; z-index:10;">
         
         <div style="width: 100%; height:1px; background-color:black; margin-top:8px; "></div>
         

@@ -68,14 +68,7 @@ class CotizacionController extends Controller
         $date =  Carbon::now()->format("d/m/Y");
 
         $user = auth()->user();
-        $quotes = Quote::where('user_id', $user->id)->where('id',$request->id)->get();
-        
-        $recipients = [
-            'daniel@trademarket.com.mx',
-            'ugamboa@medix.com.mx',
-            'jsantos@medix.com.mx',
-        ];
-
+        $quotes = Quote::where('id',$request->id)->get();
         $pdf = \PDF::loadView('pages.pdf.quoteBH', ['date' => $date, 'quotes' => $quotes]);
         $pdf->setPaper('Letter', 'portrait');
         $filename = "Cotizacion.pdf";
