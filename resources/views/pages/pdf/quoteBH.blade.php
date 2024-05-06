@@ -15,14 +15,15 @@
         <p style="margin-left:652px; margin-top:72px; z-index:2; color:#FFFFFF; font-size:12px;"><b>QS-001</b></p>
 
         <p style="margin-left:672px; margin-top:2px; z-index:2; color:#FFFFFF; font-size:12px;"><b>{{$date}}</b></p>
-        <img src="img/logo_loreal.png" alt="loreal" style="width: 80px; z-index:4; margin-top:60px; margin-left:50px;">
-        {{-- <div style="z-index:4; margin-top:20px;">
+            <div style="z-index:4; margin-top:20px;">
+            <img src="img/logo_loreal.png" alt="loreal" style="width: 80px; z-index:4; margin-top:30px; margin-left:72px; margin-bottom: 6px;">
             <center>
-                <span style="display: inline; margin-right:30px;">Vendedor: Daniel Levy Hano    </span>
-                <span style="display: inline; margin-right:30px;">5530395106   </span>
-                <span style="display: inline; margin-right:30px;">daniel@trademarket.com.mx    </span>
+               
+                <span style="display: inline; margin-right:30px; color:#0225F4;"><b>Vendedor: </b> <b style="color:black;">Daniel Levy Hano </b> </span>
+                <span style="display: inline; margin-right:30px;"> <img src="img/whatsapp.png" alt="whatsapp" style="width: 14px; margin-right:10px;"><b>5530395106</b> </span>
+                <span style="display: inline; margin-right:30px;"> <img src="img/email.png" alt="whatsapp" style="width: 14px; margin-right:10px;"><b>daniel@trademarket.com.mx </b></span>
             </center>
-        </div> --}}
+        </div> 
        
     </header>
 
