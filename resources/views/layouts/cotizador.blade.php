@@ -40,8 +40,8 @@ n<!doctype html>
             <div class="w-full flex flex-col sm:flex-row justify-between items-center text-primary mt-4">
                 <div class="mb-4 sm:mb-0">
                     <p class="ml-4 mr-4 text-xl font-bold text-white">CONTACTO: </p>
-                    <p class="ml-4 mr-4 text-lg sm:text-base text-white">EMAIL@EMAIL.COM</p>
-                    <p class="ml-4 mr-4 text-lg sm:text-base text-white">TELEFONO: 55 45 67 89 90</p>
+                    <p class="ml-4 mr-4 text-lg sm:text-base text-white">daniel@trademarket.com.mx</p>
+                    <p class="ml-4 mr-4 text-lg sm:text-base text-white">TELEFONO: 55 3039 5106 </p>
                 </div>
 
                 

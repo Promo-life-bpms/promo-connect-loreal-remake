@@ -25,7 +25,7 @@
                     }
                 }
             </style>
-            <div class="w-full sm:w-full md:w-70 ml-10">
+            <div class="w-full sm:w-full md:w-70">
                 <div class="relative mt-8" wire:loading.class="opacity-40">
                     <div class="absolute top-5 w-full">
                         <div wire:loading.flex class="justify-center">
