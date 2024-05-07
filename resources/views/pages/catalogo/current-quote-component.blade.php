@@ -229,8 +229,8 @@
                     <select id="type_sample" name="type_sample" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" wire:model="type_sample">
                         <option value="fisica sin logotipo" selected>Muestra física sin Logotipo</option>
                         <option value="fisica con logotipo">Muestra física con logotipo</option>
-                        <option value="virtual sin logotipo">Muestra virtual sin Logotipo</option>
-                        <option value="virtual con logotipo">Muestra virtual con logotipo</option>
+{{--                         <option value="virtual sin logotipo">Muestra virtual sin Logotipo</option>
+ --}}                        <option value="virtual con logotipo">Muestra virtual con logotipo</option>
                     </select>
                 </div>
     
