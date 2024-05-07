@@ -8,7 +8,11 @@
             </div>
         @endif --}}
         <div class="flex justify-between mx-20 mt-20">
-            <h3 class="text-2xl font-bold "> Solicitudes especiales</h3>
+            <div class="font-semibold text-slate-700 py-8 flex items-center space-x-2">
+                <a class="text-secondary" href="/">Inicio</a>
+                <p class="text-secondary"> / </p>
+                <a class="text-secondary" href="#">Solicitudes especiales</a>
+            </div>
 
             <div>
                 <!-- Modal toggle -->
@@ -82,7 +86,7 @@
 
                 <table  style="width:90%;">
 
-                    <thead class="bg-blue-900 text-white">
+                    <thead class="bg-black text-white">
                         <tr>
                             <th style="width: 5%;" class="p-4">#</th>
                             <th style="width: 35%;">Descripción</th>
