@@ -89,7 +89,7 @@ class Catalogo extends Component
         if ($stockMax == null) {
             $stockMax = $stock;
         }
-
+    
         if ($stockMin == null) {
             $stockMin = 0;
         }
@@ -98,7 +98,7 @@ class Catalogo extends Component
             ->where('family', 'not like', '%textil%')
             ->limit(8)
             ->get();
-
+    
         $products = CatalogoProduct::leftjoin('product_category', 'product_category.product_id', 'products.id')
             ->leftjoin('categories', 'product_category.category_id', 'categories.id')
             ->leftjoin('colors', 'products.color_id', 'colors.id')
@@ -112,18 +112,22 @@ class Catalogo extends Component
                 $newColor  = '%' . $color . '%';
                 $query->where('colors.color', 'LIKE', $newColor);
             })
+            ->when($category !== '' && $category !== null, function ($query) use ($category) {
+                $query->where(function ($query) use ($category) {
+                    $query->where('categories.id', $category);
+                });
+            }, function ($query) {
+                // Si no se proporciona una categoría, no aplicamos ningún filtro de categoría
+            })
             ->when($nombre !== '' && $nombre !== null, function ($query) use ($nombre) {
                 $query->where(function ($query) use ($nombre) {
                     $query->where('products.name', 'LIKE', '%' . $nombre . '%')
                         ->orWhere('products.description', 'LIKE', '%' . $nombre . '%');
                 });
-            }, function ($query) {
-                // Si no se proporciona un nombre, no aplicamos ningún filtro de nombre
             })
             ->select('products.*')
             ->paginate(32);
-
-      
+    
         return view('pages.catalogo.catalogoComponent', [
             'products' => $products,
             'categories' => $categories,
@@ -136,6 +140,7 @@ class Catalogo extends Component
             'stockMin' => $stockMin,
         ]);
     }
+
     public function paginationView()
     {
         return 'vendor.livewire.tailwind';
