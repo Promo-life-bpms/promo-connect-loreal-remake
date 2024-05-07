@@ -39,7 +39,6 @@ class Catalogo extends Component
     public function mount()
     {
         $this->nombre = Session::get('busqueda', '');
-        $this->category = Session::get('category', '');
         $this->color = Session::get('color', '');
     
         try {
@@ -167,6 +166,7 @@ class Catalogo extends Component
 
     public function changeCategory($category_id)
     {
-        $this->category =  $this->category == $category_id ? null : $category_id;
+        $this->category = $this->category == $category_id ? null : $category_id;
+        Session::put('category', $this->category);
     }
 }
