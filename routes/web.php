@@ -35,6 +35,7 @@ Route::post('/broadcasting/auth', function () {
 Route::get('/load-external-image', [ImageProxyController::class, 'loadExternalImage']);
 Route::post('/temporal-image', [TemporalImageUrlController::class, 'saveImage']);
 Route::get('/example-pdf', [CotizacionController::class, 'examplePDF']);
+Route::get('/importacion', [CotizacionController::class, 'importacion']);
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/', [CotizadorController::class, 'index'])->name('index');

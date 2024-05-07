@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Catalogo\Product;
 use App\Models\CurrentQuoteDetails;
 use App\Models\Quote;
 use App\Models\QuoteTechniques;
@@ -166,5 +167,10 @@ class CotizacionController extends Controller
 
         return back()->with('mensaje', 'Pedido especial creado con éxito');
 
+    }
+
+    public function importacion() {
+        $products = Product::where('provider_id',1985)->get();
+        return view('pages.seller.importacion', compact('products'));
     }
 }
