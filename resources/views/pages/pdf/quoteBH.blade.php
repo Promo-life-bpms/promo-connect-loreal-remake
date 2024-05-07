@@ -72,6 +72,12 @@
 
                 $productLogo = optional($productData)->logo;
 
+/*                 $category = $product->categories[0]->id;
+ */
+                $productBD =  optional(\App\Models\Catalogo\Product::where('id', $productData->id)->latest()->first());
+
+                $category =  $productBD->categories[0]->id ? $productBD->categories[0]->id:0;
+
                 if($productLogo != '' || $productLogo !=null){
                     $filePath = public_path('/storage/logos/' . $productLogo);
                 }else{
@@ -113,7 +119,47 @@
                             <center><img style="width:200px; height:240px; object-fit:contain;" src="data:image/png;base64,{{$image64}}" alt=""></center>
                         @endif
                         </td>
-                        <td colspan="3" style="width:70%; padding:2px;">{{ $productName }}</td>
+                        <td colspan="3" style="width:70%; padding:2px;">
+                            {{ $productName }}
+
+                            @switch($category)
+                                @case(0)
+                                    <p> <b>Categoría: Otra</b> </p>
+
+                                    @break
+                                @case(27)
+                                    <p> <b>Categoría: PPD Salon Tools</b> </p>
+
+                                    @break
+                                @case(47)
+                                    <p> <b>Categoría: Standard Bags and Pouches</b> </p>
+
+                                    @break
+                                @case(7)
+                                    <p> <b>Categoría: Standard/Customized electric devices (no brand) </b> </p>
+
+                                    @break
+                                @case(8)
+                                    <p> <b>Categoría: Scarfs & sarongs</b> </p>
+
+                                    @break
+                                @case(4)
+                                    <p> <b>Categoría: Promotional Towel Items & Bath Robes</b> </p>
+
+                                    @break
+                                @case(44)
+                                    <p> <b>Categoría: Tee-Shirt</b> </p>
+
+                                    @break
+                                @case(5)
+                                    <p> <b>Categoría: Others promotional textiles </b> </p>
+
+                                    @break
+                                    
+                                @default
+                                    
+                            @endswitch
+                        </td>
                         
                     </tr>
                     <tr>
