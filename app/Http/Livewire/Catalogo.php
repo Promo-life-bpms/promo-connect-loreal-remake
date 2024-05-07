@@ -12,6 +12,7 @@ use Livewire\Component;
 use Livewire\WithPagination;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Session;
 
 class Catalogo extends Component
 {
@@ -37,18 +38,18 @@ class Catalogo extends Component
 
     public function mount()
     {
+        $this->nombre = Session::get('busqueda', '');
+        $this->category = Session::get('category', '');
+        $this->color = Session::get('color', '');
+    
         try {
-            $this->search = session()->get('busqueda', "");
-            session()->put('busqueda', '');
-            $this->nombre = $this->search;
-
             if (session()->get('category', "")) {
                 $this->changeCategory(session()->get('category', ""));
                 session()->put('category', '');
             }
         } catch (Exception $th) {
             //throw $th;
-        }
+        } 
 
         // Setear a los valores de porveedores en settings
         $providerSeleccionados = Settings::where('slug', 'providers')->first();
@@ -97,25 +98,29 @@ class Catalogo extends Component
             ->where('family', 'not like', '%textil%')
             ->limit(8)
             ->get();
+
         $products = CatalogoProduct::leftjoin('product_category', 'product_category.product_id', 'products.id')
             ->leftjoin('categories', 'product_category.category_id', 'categories.id')
             ->leftjoin('colors', 'products.color_id', 'colors.id')
-            ->where('products.name', 'LIKE', $nombre)
             ->where('products.visible', '=', true)
             ->where('products.price', '>', 0)
             ->whereIn('products.provider_id', $this->settings['providers'])
             ->whereBetween('products.price', [$precioMin, $precioMax])
             ->whereBetween('products.stock', [$stockMin, $stockMax])
             ->whereIn('products.type_id', [1])
-            ->when($color !== '' && $color !== null, function ($query, $color) {
-                $newColor  = '%' . $this->color . '%';
+            ->when($color !== '' && $color !== null, function ($query) use ($color) {
+                $newColor  = '%' . $color . '%';
                 $query->where('colors.color', 'LIKE', $newColor);
             })
-            ->when($category !== '' && $category !== null, function ($query, $category) {
-                $query->where('categories.id', $this->category);
+            ->when($nombre !== '' && $nombre !== null, function ($query) use ($nombre) {
+                $query->where(function ($query) use ($nombre) {
+                    $query->where('products.name', 'LIKE', '%' . $nombre . '%')
+                        ->orWhere('products.description', 'LIKE', '%' . $nombre . '%');
+                });
+            }, function ($query) {
+                // Si no se proporciona un nombre, no aplicamos ningún filtro de nombre
             })
             ->select('products.*')
-            ->inRandomOrder()
             ->paginate(32);
 
       
@@ -138,6 +143,10 @@ class Catalogo extends Component
 
     public function updated()
     {
+        Session::put('busqueda', $this->nombre);
+        Session::put('category', $this->category);
+        Session::put('color', $this->color);
+
         $this->resetPage();
     }
 

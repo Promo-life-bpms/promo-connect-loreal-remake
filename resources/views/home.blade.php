@@ -172,91 +172,92 @@
     </div>
 
 
-    <div class="container mx-auto max-w-7xl mt-10" style="height: 300px;"> 
+    <div class="container mx-auto w-full mt-10"> 
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
 
-        <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <a href="{{ route('categoryfilter', ['category' => 27]) }}" class="transition-transform transform hover:scale-105 mb-10">
-                        <div class="bg-white shadow-lg flex flex-col items-center justify-center border border-black hover:bg-black hover:text-stone-300 img1" >
-                            <p class="font-bold mt-6 text-center">PPD Salon Tools</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="{{ route('categoryfilter', ['category' => 47]) }}" class="transition-transform transform hover:scale-105 mb-10">
-                        <div class="w-48 h-40 bg-white shadow-lg flex flex-col items-center justify-center border border-black hover:bg-black hover:text-stone-300 img3" >
-                            <p class="font-bold mt-6 text-center p-2">Luggage & Trolley (no brand)</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="{{ route('categoryfilter', ['category' => 47]) }}" class="transition-transform transform hover:scale-105 mb-10">
-                        <div class="w-48 h-40 bg-white shadow-lg flex flex-col items-center justify-center border border-black hover:bg-black hover:text-stone-300 img3" >
-                            <p class="font-bold mt-6 text-center p-2">Standard Bags and Pouches </p>
-                        </div>
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="{{ route('categoryfilter', ['category' => 27]) }}" class="transition-transform transform hover:scale-105 mb-10">
-                        <div class="w-48 h-40 bg-white shadow-lg flex flex-col items-center justify-center border border-black hover:bg-black hover:text-stone-300 img4" >
-                            <p class="font-bold mt-6 text-center p-2">Professional Beauty & Make-up Tools </p>
-                        </div>
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="{{ route('categoryfilter', ['category' => 27]) }}" class="transition-transform transform hover:scale-105 mb-10">
-                        <div class="w-48 h-40 bg-white shadow-lg flex flex-col items-center justify-center border border-black hover:bg-black hover:text-stone-300 img5" >
-                            <p class="font-bold mt-6 text-center p-2">Promotional jewelry & small metal accessories </p>
-                        </div>
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="{{ route('categoryfilter', ['category' => 7]) }}" class="transition-transform transform hover:scale-105 mb-10">
-                        <div class="w-48 h-40 bg-white shadow-lg flex flex-col items-center justify-center border border-black hover:bg-black hover:text-stone-300 img6" >
-                            <p class="font-bold mt-6 text-center p-2">Standard/Customized electric devices (no brand)</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="{{ route('categoryfilter', ['category' => 8]) }}" class="transition-transform transform hover:scale-105 mb-10">
-                        <div class="w-48 h-40 bg-white shadow-lg flex flex-col items-center justify-center border border-black hover:bg-black hover:text-stone-300 img7" >
-                            <p class="font-bold mt-6 text-center p-2">Standard gifts & accessories & stationary (from stock items)</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="{{ route('categoryfilter', ['category' => 4]) }}" class="transition-transform transform hover:scale-105 mb-10">
-                        <div class="w-48 h-40 bg-white shadow-lg flex flex-col items-center justify-center border border-black hover:bg-black hover:text-stone-300 img8" >
-                            <p class="font-bold mt-6 text-center p-2">Promotional Towel Items & Bath Robes</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="{{ route('categoryfilter', ['category' => 44]) }}" class="transition-transform transform hover:scale-105 mb-10">
-                        <div class="w-48 h-40 bg-white shadow-lg flex flex-col items-center justify-center border border-black hover:bg-black hover:text-stone-300 img9" >
-                            <p class="font-bold mt-6 text-center p-2">Tee-Shirt </p>
-                        </div>
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="{{ route('categoryfilter', ['category' => 5]) }}" class="transition-transform transform hover:scale-105 mb-10">
-                        <div class="w-48 h-40 bg-white shadow-lg flex flex-col items-center justify-center border border-black hover:bg-black hover:text-stone-300 img10" >
-                            <p class="font-bold mt-6 text-center p-2">Others promotional textiles</p>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="swiper-slide">
-                    <a href="{{ route('categoryfilter', ['category' => 8]) }}" class="transition-transform transform hover:scale-105 mb-10">
-                        <div class="w-48 h-40 bg-white shadow-lg flex flex-col items-center justify-center border border-black hover:bg-black hover:text-stone-300 img11" >
-                            <p class="font-bold mt-6 text-center p-2">Scarfs & sarongs</p>
-                        </div>
-                    </a>
-                </div>
+            <div class="swiper-slide">
+                <a href="{{ route('categoryfilter', ['category' => 27]) }}" class="transition-transform transform hover:scale-105 mb-10">
+                    <div class="bg-white shadow-lg flex flex-col items-center justify-center border border-black hover:bg-black hover:text-stone-300 img1" >
+                        <p class="font-bold mt-6 text-center">PPD Salon Tools</p>
+                    </div>
+                </a>
             </div>
-            <div class="swiper-pagination"></div>
-          </div>
+            <div class="swiper-slide">
+                <a href="{{ route('categoryfilter', ['category' => 47]) }}" class="transition-transform transform hover:scale-105 mb-10">
+                    <div class="w-48 h-40 bg-white shadow-lg flex flex-col items-center justify-center border border-black hover:bg-black hover:text-stone-300 img3" >
+                        <p class="font-bold mt-6 text-center p-2">Luggage & Trolley (no brand)</p>
+                    </div>
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="{{ route('categoryfilter', ['category' => 47]) }}" class="transition-transform transform hover:scale-105 mb-10">
+                    <div class="w-48 h-40 bg-white shadow-lg flex flex-col items-center justify-center border border-black hover:bg-black hover:text-stone-300 img3" >
+                        <p class="font-bold mt-6 text-center p-2">Standard Bags and Pouches </p>
+                    </div>
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="{{ route('categoryfilter', ['category' => 27]) }}" class="transition-transform transform hover:scale-105 mb-10">
+                    <div class="w-48 h-40 bg-white shadow-lg flex flex-col items-center justify-center border border-black hover:bg-black hover:text-stone-300 img4" >
+                        <p class="font-bold mt-6 text-center p-2">Professional Beauty & Make-up Tools </p>
+                    </div>
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="{{ route('categoryfilter', ['category' => 27]) }}" class="transition-transform transform hover:scale-105 mb-10">
+                    <div class="w-48 h-40 bg-white shadow-lg flex flex-col items-center justify-center border border-black hover:bg-black hover:text-stone-300 img5" >
+                        <p class="font-bold mt-6 text-center p-2">Promotional jewelry & small metal accessories </p>
+                    </div>
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="{{ route('categoryfilter', ['category' => 7]) }}" class="transition-transform transform hover:scale-105 mb-10">
+                    <div class="w-48 h-40 bg-white shadow-lg flex flex-col items-center justify-center border border-black hover:bg-black hover:text-stone-300 img6" >
+                        <p class="font-bold mt-6 text-center p-2">Standard/Customized electric devices (no brand)</p>
+                    </div>
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="{{ route('categoryfilter', ['category' => 8]) }}" class="transition-transform transform hover:scale-105 mb-10">
+                    <div class="w-48 h-40 bg-white shadow-lg flex flex-col items-center justify-center border border-black hover:bg-black hover:text-stone-300 img7" >
+                        <p class="font-bold mt-6 text-center p-2">Standard gifts & accessories & stationary (from stock items)</p>
+                    </div>
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="{{ route('categoryfilter', ['category' => 4]) }}" class="transition-transform transform hover:scale-105 mb-10">
+                    <div class="w-48 h-40 bg-white shadow-lg flex flex-col items-center justify-center border border-black hover:bg-black hover:text-stone-300 img8" >
+                        <p class="font-bold mt-6 text-center p-2">Promotional Towel Items & Bath Robes</p>
+                    </div>
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="{{ route('categoryfilter', ['category' => 44]) }}" class="transition-transform transform hover:scale-105 mb-10">
+                    <div class="w-48 h-40 bg-white shadow-lg flex flex-col items-center justify-center border border-black hover:bg-black hover:text-stone-300 img9" >
+                        <p class="font-bold mt-6 text-center p-2">Tee-Shirt </p>
+                    </div>
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="{{ route('categoryfilter', ['category' => 5]) }}" class="transition-transform transform hover:scale-105 mb-10">
+                    <div class="w-48 h-40 bg-white shadow-lg flex flex-col items-center justify-center border border-black hover:bg-black hover:text-stone-300 img10" >
+                        <p class="font-bold mt-6 text-center p-2">Others promotional textiles</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="swiper-slide">
+                <a href="{{ route('categoryfilter', ['category' => 8]) }}" class="transition-transform transform hover:scale-105 mb-10">
+                    <div class="w-48 h-40 bg-white shadow-lg flex flex-col items-center justify-center border border-black hover:bg-black hover:text-stone-300 img11" >
+                        <p class="font-bold mt-6 text-center p-2">Scarfs & sarongs</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+
+        
           
     </div>   
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
