@@ -124,39 +124,39 @@
 
                             @switch($category)
                                 @case(0)
-                                    <p> <b>Categoría: Otra</b> </p>
+                                    <p> <b>Categoría:</b>  Otra</p>
 
                                     @break
                                 @case(27)
-                                    <p> <b>Categoría: PPD Salon Tools / Professional Beauty & Make-up Tools / Promotional jewelry & small metal accessories </b> </p>
+                                    <p> <b>Categoría:</b>  PPD Salon Tools / Professional Beauty & Make-up Tools / Promotional jewelry & small metal accessories </p>
                                     
                                     @break
                                 @case(47)
-                                    <p> <b>Categoría: Luggage & Trolley (no brand) / Standard Bags and Pouches</b> </p>
+                                    <p> <b>Categoría:</b> Luggage & Trolley (no brand) / Standard Bags and Pouches </p>
 
                                     @break
                                 @case(22)
-                                    <p> <b>Categoría: Standard/Customized electric devices (no brand) </b> </p>
+                                    <p> <b>Categoría:</b> Standard/Customized electric devices (no brand)  </p>
 
                                     @break
                                 @case(8)
-                                    <p> <b>Categoría: Scarfs & sarongs</b> </p>
+                                    <p> <b>Categoría:</b> Scarfs & sarongs </p>
 
                                     @break
                                 @case(9)
-                                    <p> <b>Standard gifts & accessories & stationary (from stock items)</b> </p>
+                                    <p> <b>Categoría:</b>  Standard gifts & accessories & stationary (from stock items)</p>
 
                                     @break
                                 @case(4)
-                                    <p> <b>Categoría: Promotional Towel Items & Bath Robes / Scarfs & sarongs</b> </p>
+                                    <p> <b>Categoría:</b>  Promotional Towel Items & Bath Robes / Scarfs & sarongs</p>
 
                                     @break
                                 @case(44)
-                                    <p> <b>Categoría: Tee-Shirt</b> </p>
+                                    <p> <b>Categoría:</b>  Tee-Shirt</p>
 
                                     @break
                                 @case(5)
-                                    <p> <b>Categoría: Others promotional textiles </b> </p>
+                                    <p> <b>Categoría:</b>  Others promotional textiles </p>
 
                                     @break
                                     
