@@ -137,7 +137,7 @@
             <a href="/catalogo" class="mr-4">Promociones</a>
         </div>
         <div class="flex md:w-2/12 mb-2 md:mb-0">
-            <a href="/catalogo" class="mr-4">Importación</a>
+            <a href="/importacion" class="mr-4">Importación</a>
         </div>
         <div class="flex md:w-2/12 mb-2 md:mb-0">
             <a href="/special" class="mr-4">Solicitudes Especiales</a>
