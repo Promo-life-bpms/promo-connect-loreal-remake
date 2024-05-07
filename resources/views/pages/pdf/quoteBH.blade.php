@@ -128,14 +128,14 @@
 
                                     @break
                                 @case(27)
-                                    <p> <b>Categoría: PPD Salon Tools</b> </p>
-
+                                    <p> <b>Categoría: PPD Salon Tools / Professional Beauty & Make-up Tools / Promotional jewelry & small metal accessories </b> </p>
+                                    
                                     @break
                                 @case(47)
-                                    <p> <b>Categoría: Standard Bags and Pouches</b> </p>
+                                    <p> <b>Categoría: Luggage & Trolley (no brand) / Standard Bags and Pouches</b> </p>
 
                                     @break
-                                @case(7)
+                                @case(22)
                                     <p> <b>Categoría: Standard/Customized electric devices (no brand) </b> </p>
 
                                     @break
@@ -143,8 +143,12 @@
                                     <p> <b>Categoría: Scarfs & sarongs</b> </p>
 
                                     @break
+                                @case(9)
+                                    <p> <b>Standard gifts & accessories & stationary (from stock items)</b> </p>
+
+                                    @break
                                 @case(4)
-                                    <p> <b>Categoría: Promotional Towel Items & Bath Robes</b> </p>
+                                    <p> <b>Categoría: Promotional Towel Items & Bath Robes / Scarfs & sarongs</b> </p>
 
                                     @break
                                 @case(44)

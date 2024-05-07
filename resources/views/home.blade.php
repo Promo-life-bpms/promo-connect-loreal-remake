@@ -212,14 +212,14 @@
                 </a>
             </div>
             <div class="swiper-slide">
-                <a href="{{ route('categoryfilter', ['category' => 7]) }}" class="transition-transform transform hover:scale-105 mb-10">
+                <a href="{{ route('categoryfilter', ['category' => 22]) }}" class="transition-transform transform hover:scale-105 mb-10">
                     <div class="w-48 h-40 bg-white shadow-lg flex flex-col items-center justify-center border border-black hover:bg-black hover:text-stone-300 img6" >
                         <p class="font-bold mt-6 text-center p-2">Standard/Customized electric devices (no brand)</p>
                     </div>
                 </a>
             </div>
             <div class="swiper-slide">
-                <a href="{{ route('categoryfilter', ['category' => 8]) }}" class="transition-transform transform hover:scale-105 mb-10">
+                <a href="{{ route('categoryfilter', ['category' => 9]) }}" class="transition-transform transform hover:scale-105 mb-10">
                     <div class="w-48 h-40 bg-white shadow-lg flex flex-col items-center justify-center border border-black hover:bg-black hover:text-stone-300 img7" >
                         <p class="font-bold mt-6 text-center p-2">Standard gifts & accessories & stationary (from stock items)</p>
                     </div>
@@ -248,7 +248,7 @@
             </div>
 
             <div class="swiper-slide">
-                <a href="{{ route('categoryfilter', ['category' => 8]) }}" class="transition-transform transform hover:scale-105 mb-10">
+                <a href="{{ route('categoryfilter', ['category' => 4]) }}" class="transition-transform transform hover:scale-105 mb-10">
                     <div class="w-48 h-40 bg-white shadow-lg flex flex-col items-center justify-center border border-black hover:bg-black hover:text-stone-300 img11" >
                         <p class="font-bold mt-6 text-center p-2">Scarfs & sarongs</p>
                     </div>
