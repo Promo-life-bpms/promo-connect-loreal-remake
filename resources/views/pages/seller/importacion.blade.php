@@ -98,15 +98,15 @@
                                                 </div>
                                             </div>
                                             <div class="text-center flex-grow gap-2 flex flex-col justify-between sm:block">
-                                                <div class="py-2 text-lg text-slate-700">
+                                                {{-- <div class="py-2 text-lg text-slate-700">
                                                     <h5 class="capitalize m-0">
                                                         {{ Str::limit($row->name, 22, '...') }}</h5>
                                                     <p class="m-0">$
                                                         {{number_format($priceProduct,2)}}</p>
-                                                </div>
-                                                <a href="{{ route('show.product', ['product' => $row->id]) }}"
-                                                    class="block w-full bg-primary hover:bg-primary-dark text-white text-center rounded-sm font-semibold py-2 rounded-xl">
-                                                    Cotizar
+                                                </div> --}}
+                                                <a href="https://api.whatsapp.com/send?phone=5530395106&text=Hola%20me%20gustaría%20solicitar%20una%20cotización%20para%20el%20producto%20{{ $row->name }}%20con%20SKU%20:%20({{ $row->internal_sku }})"
+                                                    class="block w-full bg-green-500 hover:bg-green-600 text-white text-center rounded-sm font-semibold py-2 rounded-xl">
+                                                    Solicitar cotización
                                                 </a>
                                             </div>
                                         </div>
