@@ -124,6 +124,10 @@ class Catalogo extends Component
                         ->orWhere('products.description', 'LIKE', '%' . $nombre . '%');
                 });
             })
+            ->where(function ($query) {
+                $query->where('products.name', 'NOT LIKE', '%vela%')
+                    ->where('products.description', 'NOT LIKE', '%vela%');
+            })
             ->select('products.*')
             ->paginate(32);
     
