@@ -28,16 +28,20 @@ use Carbon\Carbon;
 use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Session;
+use Livewire\WithFileUploads;
+
 
 class CurrentQuoteComponent extends Component
 {
+    use WithFileUploads;
+
     public $cotizacionActual, $totalQuote;
     public $discountMount = 0;
 
     public $value, $type;
     public $quoteEdit, $quoteShow;
 
-    public $nombre, $telefono, $direccion, $quote_id, $type_sample;
+    public $nombre, $telefono, $direccion, $quote_id, $type_sample, $logo;
 
     public $pdfDescargado = false;
     
@@ -141,6 +145,8 @@ class CurrentQuoteComponent extends Component
 
     public function solicitarMuestra()
     {
+
+        
         if($this->type_sample == null || $this->type_sample == 'fisica sin logotipo' || $this->type_sample == 'fisica con logotipo' ){
             $this->validate([
                 'nombre' => 'required',
@@ -157,8 +163,20 @@ class CurrentQuoteComponent extends Component
                 $error = true;
                 $msg = "Ya has solicitado 3 muestras de este producto";
             } else {
+
+                
+                if($this->type_sample == 'virtual con logotipo' ){
+                    $this->validate([
+                        'logo' => 'required',
+                    ]);
+                }
+
+                $filename = 'logo_' . time() . '.' . $this->logo->getClientOriginalExtension();
+                $ruta = $this->logo->storeAs('public/logos', $filename);
+                $path = 'storage/' . str_replace('public/', '', $ruta);
+
                 $muestra = auth()->user()->sampleRequest()->create([
-                    'address' => $this->direccion == null? 'virtual':  $this->direccion,
+                    'address' => $this->type_sample == 'virtual con logotipo'? $path :  ($this->direccion == null? 'virtual':  $this->direccion),
                     'phone' => $this->telefono == null? 'virtual':  $this->telefono,
                     'name' => $this->nombre == null? 'virtual':  $this->nombre,
                     'type' => $this->type_sample == null? 'fisica sin logotipo' : $this->type_sample,
@@ -167,6 +185,8 @@ class CurrentQuoteComponent extends Component
                     'current_quote_id' => $ccd->id,
                 ]);
 
+               
+        
                 $msg = "La muestra del producto se ha solicitado correctamente";
                 $this->nombre = null;
                 $this->telefono = null;
@@ -187,7 +207,7 @@ class CurrentQuoteComponent extends Component
                 }
             }
         } catch (Exception $e) {
-            $msg = $e->getMessage();
+            $msg = 'Ocurrio un error, intenta nuevamente';
             $error = true;
         }
         $this->dispatchBrowserEvent('muestraSolicitada', ['msg' => $msg, "error" => $error]);

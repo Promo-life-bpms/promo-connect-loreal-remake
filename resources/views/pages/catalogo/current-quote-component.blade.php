@@ -235,7 +235,7 @@
                 </div>
     
                 {{-- Nombre --}}
-                <div class="col-span-1 py-2 text-left">
+                <div class="col-span-1 py-2 text-left @if($type_sample == 'virtual sin logotipo' || $type_sample == 'virtual con logotipo') hidden @endif">
                     <label for="nombre">Nombre: </label>
                 </div>
                 <div class="col-span-2 py-2 flex flex-col @if($type_sample == 'virtual sin logotipo' || $type_sample == 'virtual con logotipo') hidden @endif">
@@ -266,7 +266,19 @@
                     <span>{{ $message }}</span>
                     @enderror
                 </div>
-    
+                
+
+                <div class="col-span-1 py-2 text-left @if($type_sample == 'fisica sin logotipo' || $type_sample == 'fisica con logotipo' || $type_sample == '') hidden @endif">
+                    <label for="direcion">Logotipo: </label>
+                </div>
+                <div class="col-span-2 py-2 @if($type_sample == 'fisica sin logotipo' || $type_sample == 'fisica con logotipo' || $type_sample == '') hidden @endif">
+                    <input type="file" name="logo" id="logo" wire:model="logo">
+                    @error('logo')
+                    <span>{{ $message }}</span>
+                    @enderror
+                </div>
+        
+               
             </div>
             <button class="px-3 py-1 text-md " onclick="closeModal()">Cancelar</button>
             <button class="px-5 py-1 ml-2 rounded-sm text-md text-white font-semibold bg-primary hover:bg-primary-dark" wire:click="solicitarMuestra">Enviar</button>

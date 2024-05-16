@@ -2700,6 +2700,11 @@ body {
   background-color: rgb(17 24 39 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-green-600:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(5 122 85 / var(--tw-bg-opacity));
+}
+
 .hover\:bg-lime-600:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(101 163 13 / var(--tw-bg-opacity));
@@ -2755,14 +2760,9 @@ body {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.hover\:bg-green-400:hover {
+.hover\:bg-blue-700:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(49 196 141 / var(--tw-bg-opacity));
-}
-
-.hover\:bg-green-600:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(5 122 85 / var(--tw-bg-opacity));
+  background-color: rgb(26 86 219 / var(--tw-bg-opacity));
 }
 
 .hover\:text-\[\#009CDE\]:hover {

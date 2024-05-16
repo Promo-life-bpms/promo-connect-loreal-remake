@@ -132,8 +132,13 @@
                             <span>{{ $muestra->phone }}</span>
                         </div>
                         <div>
-                            <strong>Dirección:</strong>
-                            <span>{{ $muestra->address }}</span>
+                            @if($muestra->type == 'virtual con logotipo')
+                                <strong>Logotipo:</strong>
+                                <a href="{{ asset($muestra->address) }}" class="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-1 rounded transition duration-300 ease-in-out ml-2">Abrir Archivo</a>
+                            @else
+                                <strong>Dirección:</strong>
+                                <span>{{ $muestra->address }}</span>
+                            @endif
                         </div>
                     </div>
                 </div>
