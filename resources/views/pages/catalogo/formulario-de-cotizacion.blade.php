@@ -53,10 +53,11 @@
                                     <td class="px-6 py-3"><strong>Escala</strong></td>
                                     <td class="px-6 py-3"><strong>Precio</strong></td>
                                     <td class="px-6 py-3"><strong>Tipo de precio</strong></td>
+                                    <td class="px-6 py-3"><strong>Ahorro</strong></td>
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($preciosDisponibles as $item)
+                                @foreach ($preciosDisponibles as $index => $item)
                                     <tr class="bg-white border-b">
                                         <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
                                             {{ $item->escala_inicial }} - {{ $item->escala_final }}
@@ -65,6 +66,18 @@
                                         <td class="px-6 py-4">
                                             {{ $item->tipo_precio == 'F' ? 'Precio por Articulo' : 'Precio Fijo' }}
                                         </td>
+                                        @if ($loop->first)
+                                            <td class="px-6 py-4"> 0 </td>
+                                        @else
+                                            @if($index == 1)
+                                                <td class="px-6 py-4"> 
+                                                    $ {{ number_format(abs(($item->precio * $item->escala_inicial) - ($preciosDisponibles[$index - 1]->precio)), 2) }}  - 
+                                                    $ {{ number_format(abs(($item->precio * $item->escala_final) - ($preciosDisponibles[$index - 1]->precio)), 2) }}
+                                                </td>
+                                            @else
+                                                <td class="px-6 py-4">$ {{ number_format(abs($item->precio - $preciosDisponibles[$index - 1]->precio),2) }} - </td>
+                                            @endif
+                                        @endif
                                     </tr>
                                 @endforeach
                             </tbody>
@@ -308,6 +321,38 @@
         {{--  @if (!$priceScales) --}}
         <div>
             <h6 class="text-success"><strong>Precio Final por Articulo:</strong> $ {{ number_format($costoCalculado,2)}}</h6>
+
+            <h6 class="text-success"><strong>Ahorro:</strong> 
+                
+                $ {{ number_format($costoTotal,2)}}
+            
+
+
+                @foreach ($preciosDisponibles as $index => $item)
+                   
+                        @if ($loop->first)
+                            <p class="px-6 py-4"> 0 </p>
+                        @else
+                            @if($index == 1)
+                                <p class="px-6 py-4"> 
+                                    $ {{ number_format(abs(($item->precio * $item->escala_inicial) - ($preciosDisponibles[$index - 1]->precio)), 2) }}  - 
+                                    $ {{ number_format(abs(($item->precio * $item->escala_final) - ($preciosDisponibles[$index - 1]->precio)), 2) }}
+                                </p>
+                            @else
+                                <p class="px-6 py-4">$ {{ $costoTotal* number_format(     abs($item->precio - $preciosDisponibles[$index - 1]->precio),2)    }} - </td>
+                            @endif
+                        @endif
+                        
+                @endforeach
+
+
+
+
+
+
+
+            </h6>
+
             <h6 class="text-success"><strong>Precio Total:</strong> $ {{ number_format($costoTotal,2)}}</h6>
             <br>
         </div>
