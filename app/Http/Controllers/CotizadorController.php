@@ -579,4 +579,15 @@ class CotizadorController extends Controller
         return redirect()->back()->with('message', 'Este es tu mensaje de sesión.');
 
     }
+
+
+    public function comprasSubirOrden(Request $request) {
+        
+        $filename = 'logo_' . time() . '.' . $request->logo->getClientOriginalExtension();
+        $route = $request->logo->storeAs('public/oc', $filename);
+        $path = 'storage/' . str_replace('public/', '', $route);
+
+        
+
+    }
 }
