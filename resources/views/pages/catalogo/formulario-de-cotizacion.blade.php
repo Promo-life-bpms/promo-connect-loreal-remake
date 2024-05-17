@@ -323,32 +323,60 @@
             <h6 class="text-success"><strong>Precio Final por Articulo:</strong> $ {{ number_format($costoCalculado,2)}}</h6>
 
             <h6 class="text-success"><strong>Ahorro:</strong> 
-                
-                $ {{ number_format($costoTotal,2)}}
-            
-
-
+                 
                 @foreach ($preciosDisponibles as $index => $item)
                    
                         @if ($loop->first)
-                            <p class="px-6 py-4"> 0 </p>
+                            @if($item->escala_final != null && $cantidad <= $item->escala_final && $cantidad >= $item->escala_inicial)
+                                <b> $ 0 </b>
+                            @endif
                         @else
                             @if($index == 1)
-                                <p class="px-6 py-4"> 
-                                    $ {{ number_format(abs(($item->precio * $item->escala_inicial) - ($preciosDisponibles[$index - 1]->precio)), 2) }}  - 
-                                    $ {{ number_format(abs(($item->precio * $item->escala_final) - ($preciosDisponibles[$index - 1]->precio)), 2) }}
-                                </p>
+
+                                @if( $item->escala_final == null)
+
+                                    @if($cantidad >= $item->escala_inicial)
+                                        @php
+                                            $costo_anterior = $costoTotal * abs(($preciosDisponibles[$index - 1]->precio / ($preciosDisponibles[$index - 1]->escala_final)) - $item->precio) ;
+                                        @endphp
+                                        <b> 
+                                            $ {{ number_format($costo_anterior,2)  }}                          
+                                        </b>
+                                    @endif
+                                @else 
+                                    @if($cantidad <= $item->escala_final && $cantidad >= $item->escala_inicial)
+                                        @php
+                                            $costo_anterior = $costoTotal * abs(($preciosDisponibles[$index - 1]->precio / ($preciosDisponibles[$index - 1]->escala_final)) - $item->precio) ;
+                                        @endphp
+                                        <b> 
+                                            $ {{  number_format($costo_anterior,2) }}                          
+                                        </b>
+                                    @endif
+
+                                @endif
+
                             @else
-                                <p class="px-6 py-4">$ {{ $costoTotal* number_format(     abs($item->precio - $preciosDisponibles[$index - 1]->precio),2)    }} - </td>
+
+                                @if($item->escala_final == null)
+                                    
+                                    @if($cantidad >= $item->escala_inicial)
+                                        @php
+                                            $total_ahorro = $costoTotal * abs($item->precio - $preciosDisponibles[$index - 1]->precio)
+                                        @endphp
+                                        <b>$ {{  number_format($total_ahorro,2)   }}  </b>
+                                    @endif
+                                @else
+                                    @if($cantidad >= $item->escala_inicial && $cantidad <= $item->escala_final)
+                                        @php
+                                            $total_ahorro = $costoTotal * abs($item->precio - $preciosDisponibles[$index - 1]->precio)
+                                        @endphp
+                                        <b>$ {{   number_format($total_ahorro,2)  }}  </b>
+                                    @endif
+                                @endif
                             @endif
                         @endif
                         
                 @endforeach
-
-
-
-
-
 
 
             </h6>

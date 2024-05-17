@@ -112,7 +112,10 @@
                             <td class="text-center">{{ $product->dias_entrega}} dias</td>
                             <td class="text-center"> {{ $product->cantidad}} piezas</td>
                             <td class="text-center"> <b>$ {{ $product->precio_unitario}} </b>   </td>
-                            <td class="text-center"> <b>$ {{ number_format($product->precio_total, 2, '.', ',') }} </b>  </td>
+                            <td class="text-center"> <b>
+                                $ {{ number_format($product->precio_total, 2, '.', ',') }} </b> 
+                                <p class="text-green-700 text-xs mt-1"> Ahorro: $ 0 </p>
+                             </td>
                             <td class="text-center"> 
                                 <form method="POST" action="{{ route('downloadPDF') }}">
                                     @csrf
