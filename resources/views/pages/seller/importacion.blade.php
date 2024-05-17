@@ -62,55 +62,54 @@
 
                                 @if($haspvc == false)
                                     <div class="w-full h-auto bg-white rounded-xl shadow-lg overflow-hidden p-4" style="border: 1px solid #d1d1d1;">
-                                        <div
-                                            class="flex sm:block gap-2 sm:bg-transparent bg-white rounded-md sm:rounded-none p-2 sm:p-0">
-                                            @php
-                                                /* $priceProduct = $row->price;
-                                                if ($row->producto_promocion) {
-                                                    $priceProduct = round($priceProduct - $priceProduct * ($row->descuento / 100), 2);
-                                                } else {
-                                                    $priceProduct = round($priceProduct - $priceProduct * ($row->provider->discount / 100), 2);
-                                                }
-                                                $priceProduct = round($priceProduct / ((100 - $utilidad) / 100), 2); */
-                
-                                                if($row->provider_id == 1){
-                                                    /* FOR PROMOTIONAL */
-                                                    $priceProduct = ($row->price) * 0.93751;
-                                                }else if($row->provider_id == 2){
-                                                    /* PROMO OPCION */
-                
-                                                    $priceProduct = ($row->price) * 0.87502;
-                                                }else if($row->provider_id == 3){
-                                                    /* INNOVATION */
-                                                    $priceProduct = ($row->price) * 1.2329;
-                                                }else{
-                                                    /* OTRO */
-                                                    $priceProduct = ($row->price);
-                                                }
-                                                /* $priceProduct = round($row->price * 0.9375, 2); */
-                                    
-                                            
-                                            @endphp
-                                            <div class="w-full flex justify-center  sm:p-5 sm:bg-white  text-center">
-                                                <div class="">
-                                                    <img src="{{ $row->firstImage ? $row->firstImage->image_url : '' }}"
-                                                        class="w-auto h-52" alt="{{ $row->name }}">
-                                                </div>
-                                            </div>
-                                            <div class="text-center flex-grow gap-2 flex flex-col justify-between sm:block">
-                                                {{-- <div class="py-2 text-lg text-slate-700">
-                                                    <h5 class="capitalize m-0">
-                                                        {{ Str::limit($row->name, 22, '...') }}</h5>
-                                                    <p class="m-0">$
-                                                        {{number_format($priceProduct,2)}}</p>
-                                                </div> --}}
-                                                <p class="mb-4 text-2lx">{{ $row->name }}</p>
-                                                <a href="https://api.whatsapp.com/send?phone=5530395106&text=Hola%20me%20gustaría%20solicitar%20una%20cotización%20para%20el%20producto%20{{ $row->name }}%20con%20SKU%20:%20({{ $row->internal_sku }})"
-                                                    class="block w-full bg-green-500 hover:bg-green-600 text-white text-center rounded-sm font-semibold py-2 rounded-xl">
-                                                    Solicitar cotización
-                                                </a>
+                                        
+                                        @php
+                                            /* $priceProduct = $row->price;
+                                            if ($row->producto_promocion) {
+                                                $priceProduct = round($priceProduct - $priceProduct * ($row->descuento / 100), 2);
+                                            } else {
+                                                $priceProduct = round($priceProduct - $priceProduct * ($row->provider->discount / 100), 2);
+                                            }
+                                            $priceProduct = round($priceProduct / ((100 - $utilidad) / 100), 2); */
+            
+                                            if($row->provider_id == 1){
+                                                /* FOR PROMOTIONAL */
+                                                $priceProduct = ($row->price) * 0.93751;
+                                            }else if($row->provider_id == 2){
+                                                /* PROMO OPCION */
+            
+                                                $priceProduct = ($row->price) * 0.87502;
+                                            }else if($row->provider_id == 3){
+                                                /* INNOVATION */
+                                                $priceProduct = ($row->price) * 1.2329;
+                                            }else{
+                                                /* OTRO */
+                                                $priceProduct = ($row->price);
+                                            }
+                                            /* $priceProduct = round($row->price * 0.9375, 2); */
+                                
+                                        
+                                        @endphp
+                                        <div class="w-full flex justify-center  sm:p-5 sm:bg-white  text-center">
+                                            <div class="">
+                                                <img src="{{ $row->firstImage ? $row->firstImage->image_url : '' }}"
+                                                    class="w-auto h-52" alt="{{ $row->name }}">
                                             </div>
                                         </div>
+                                        <div class="text-center flex-grow gap-2 flex flex-col justify-between sm:block">
+                                            {{-- <div class="py-2 text-lg text-slate-700">
+                                                <h5 class="capitalize m-0">
+                                                    {{ Str::limit($row->name, 22, '...') }}</h5>
+                                                <p class="m-0">$
+                                                    {{number_format($priceProduct,2)}}</p>
+                                            </div> --}}
+                                            <p class="mb-4 text-2lx">{{ $row->name }}</p>
+                                            <a href="https://api.whatsapp.com/send?phone=5530395106&text=Hola%20me%20gustaría%20solicitar%20una%20cotización%20para%20el%20producto%20{{ $row->name }}%20con%20SKU%20:%20({{ $row->internal_sku }})"
+                                                class="block w-full bg-green-500 hover:bg-green-600 text-white text-center rounded-sm font-semibold py-2 rounded-xl">
+                                                Solicitar cotización
+                                            </a>
+                                        </div>
+                                    
                                     </div>
                                 
                                 @endif
