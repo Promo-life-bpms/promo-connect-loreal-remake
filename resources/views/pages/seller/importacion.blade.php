@@ -61,7 +61,7 @@
                                 @endphp
 
                                 @if($haspvc == false)
-                                    <div class="w-full h-auto bg-white rounded-xl shadow-lg overflow-hidden p-4" style="border: 1px solid #d1d1d1;">
+                                    <div class="w-full h-auto bg-white rounded-xl shadow-lg overflow-hidden p-4 sm:ml-0 md:ml-0" style="border: 1px solid #d1d1d1;">
                                         
                                         @php
                                             /* $priceProduct = $row->price;

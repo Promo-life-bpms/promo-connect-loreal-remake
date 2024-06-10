@@ -582,12 +582,51 @@ class CotizadorController extends Controller
 
 
     public function comprasSubirOrden(Request $request) {
+    
         
-        $filename = 'logo_' . time() . '.' . $request->logo->getClientOriginalExtension();
-        $route = $request->logo->storeAs('public/oc', $filename);
-        $path = 'storage/' . str_replace('public/', '', $route);
+        if($request->hasFile('file')){
+            $file = $request->file('file');
+        }else{
+            return redirect()->back()->with('message', 'No pudo cargarse el archivo, intenta nuevamente.');
+        }
 
+        $quote = QuoteProducts::where('id',$request->id)->first();
+
+        $product = json_decode($quote->product);
         
+        if(isset( $product->oc_file)){
+            
+            $filename = 'oc_' . time() . '.' . $file->getClientOriginalExtension();
+            $route = $file->storeAs('public/oc', $filename);
+            $path = 'storage/' . str_replace('public/', '', $route);
+
+            $product->oc_file = $path;
+
+            $filePath = $product->oc_file;
+
+            if (Storage::exists($filePath)) {
+                Storage::delete($filePath);
+            }
+            
+            DB::table('quote_products')->where('id',$request->id)->update([
+                'product' => json_encode($product)
+            ]);
+
+        }else{
+
+            $filename = 'oc_' . time() . '.' . $file->getClientOriginalExtension();
+            $route = $file->storeAs('public/oc', $filename);
+            $path = 'storage/' . str_replace('public/', '', $route);
+         
+            $product->oc_file = $path;
+
+            DB::table('quote_products')->where('id',$request->id)->update([
+                'product' => json_encode($product)
+            ]);
+
+        }
+
+        return redirect()->back()->with('message', 'Documento guardado correctamente.');
 
     }
 }

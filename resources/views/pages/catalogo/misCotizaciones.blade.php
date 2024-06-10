@@ -131,16 +131,21 @@
 
                                 @if($quoteInformation && $quoteInformation->information == 'Info')
                                     <!-- Modal toggle -->
-                                    <button data-modal-target="oc-modal-{{ $quote->id }}" data-modal-toggle="oc-modal-{{ $quote->id }}" class="w-full bg-primary hover:bg-primary text-white font-bold p-2 rounded text-sm" type="button">
-                                        Subir orden de compra
-                                    </button>
-                                    
+
+                                    @if(isset($productData->oc_file))
+                                        <a class="mb-2 text-gay-500 hover:text-gray-700 underline" target="__blank" href="{{$productData->oc_file}}">Ver archivo</a>
+                                    @else
+                                        <button data-modal-target="oc-modal-{{ $quote->id }}" data-modal-toggle="oc-modal-{{ $quote->id }}" class="w-full bg-primary hover:bg-primary text-white font-bold p-2 rounded text-sm" type="button">
+                                            Subir orden de compra
+                                        </button>
+                                    @endif
+                                   
                                     <!-- Main modal -->
                                     <div id="oc-modal-{{ $quote->id }}" data-modal-backdrop="static" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
                                         <div class="relative p-4 w-full max-w-2xl max-h-full">
                                             <!-- Modal content -->
                                             <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-                                                <form method="POST" action="{{ route('compras.realizarcompra') }}">
+                                                <form method="POST" action="{{ route('compras.subirOrden') }}" enctype="multipart/form-data">
                                                     @csrf
                                                     <input type="hidden" name="id" value="{{ $quote->id }}">
                                                     <!-- Modal header -->
@@ -157,9 +162,9 @@
                                                     </div>
                                                     <!-- Modal body -->
                                                     <div class="p-4 md:p-5 space-y-4 text-left">
-                                                        <p>Subir orden de compra, esto nos permitirá verificar los detalles de tu solicitud y asegurarnos de que todo esté en orden.</p>
-                                                        <input type="file" name="document" id="document">
-                                                    </div>
+                                                        <p>Sube tu orden de compra en formato <b>PDF</b>, esto nos permitirá verificar los detalles de tu solicitud y asegurarnos de que todo esté correcto.</p>
+                                                        <input type="file" name="file" id="file" accept="application/pdf" required>
+                                                    </div>  
                                                     <!-- Modal footer -->
                                                     <div class="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
                                                         <button type="submit" class="text-white bg-primary hover:bg-primary focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Subir archivo</button>

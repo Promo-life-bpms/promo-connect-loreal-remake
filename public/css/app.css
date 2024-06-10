@@ -2373,10 +2373,6 @@ input:checked + .toggle-bg {
   --tw-text-opacity: 1;
   color: rgb(222 247 236 / var(--tw-text-opacity));
 }
-.text-green-500 {
-  --tw-text-opacity: 1;
-  color: rgb(14 159 110 / var(--tw-text-opacity));
-}
 .text-green-600 {
   --tw-text-opacity: 1;
   color: rgb(5 122 85 / var(--tw-text-opacity));
@@ -2804,6 +2800,11 @@ body {
   color: rgb(75 85 99 / var(--tw-text-opacity));
 }
 
+.hover\:text-gray-700:hover {
+  --tw-text-opacity: 1;
+  color: rgb(55 65 81 / var(--tw-text-opacity));
+}
+
 .hover\:text-gray-900:hover {
   --tw-text-opacity: 1;
   color: rgb(17 24 39 / var(--tw-text-opacity));
@@ -3170,21 +3171,9 @@ body {
     border-radius: 0.5rem;
   }
 
-  .sm\:rounded-none {
-    border-radius: 0px;
-  }
-
-  .sm\:bg-transparent {
-    background-color: transparent;
-  }
-
   .sm\:bg-white {
     --tw-bg-opacity: 1;
     background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-  }
-
-  .sm\:p-0 {
-    padding: 0px;
   }
 
   .sm\:p-5 {
@@ -3244,6 +3233,10 @@ body {
 
   .md\:mb-0 {
     margin-bottom: 0px;
+  }
+
+  .md\:ml-0 {
+    margin-left: 0px;
   }
 
   .md\:flex {
