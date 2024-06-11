@@ -5,6 +5,7 @@ use App\Http\Controllers\APIController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\CotizacionController;
 use App\Http\Controllers\CotizadorController;
+use App\Http\Controllers\ExportDataController;
 use App\Http\Controllers\ImageProxyController;
 use App\Http\Controllers\SellerController;
 use Illuminate\Support\Facades\Auth;
@@ -94,6 +95,9 @@ Route::middleware(['auth'])->group(function () {
         // Route::view('muestra', 'livewire.muestras.index')->middleware('auth');
         Route::view('muestras', 'livewire.companies.index')->middleware('auth');
         Route::get('/settings', [CotizadorController::class, 'settings'])->name('settings');
+
+        Route::post('/change/manual-password', [AdminController::class, 'changeManualPassword'])->name('admin.changeManualPassword');
+        Route::post('/change/automatic-password', [AdminController::class, 'changeAutomaticPassword'])->name('admin.changeAutomaticPassword');
     });
     
     Route::post('/generar-cotizacion', [CotizacionController::class, 'generarPDF'])->name('generarPDF');
@@ -103,6 +107,6 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/special/storage', [CotizacionController::class, 'specialStorage'])->name('specialStorage');
 
     Route::post('/special/update', [CotizacionController::class, 'specialUpdate'])->name('specialUpdate');
-
+    Route::post('/export/user', [ExportDataController::class, 'exportUser'])->name('exportUser');
 
 });
