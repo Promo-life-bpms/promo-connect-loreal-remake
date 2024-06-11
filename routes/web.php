@@ -1,6 +1,7 @@
 <?php
 
 use App\Events\ChatEvent;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\APIController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\CotizacionController;
