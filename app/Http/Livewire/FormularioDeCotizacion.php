@@ -220,9 +220,9 @@ class FormularioDeCotizacion extends Component
     }
 
 
-    public function agregarCarrito()
+    public function agregarCarrito($ahorro)
     {
-        
+
         $user = Auth::user();
 
         $this->validate([
@@ -246,9 +246,10 @@ class FormularioDeCotizacion extends Component
             ]);
         } else {
             if (auth()->user()->currentQuote) {
+                auth()->user()->currentQuote->name = null;
                 auth()->user()->currentQuote->discount = false;
                 auth()->user()->currentQuote->type = null;
-                auth()->user()->currentQuote->value = null;
+                auth()->user()->currentQuote->value =null;
                 auth()->user()->currentQuote->save();
             }
         }
@@ -273,10 +274,7 @@ class FormularioDeCotizacion extends Component
             'precio_unitario' => $this->costoCalculado,
             'precio_total' => $this->costoTotal,
             'logo' => $imageName,
-            'embalaje' => '1',
-            'armado'  => '1',
-            'destino' => '1',
-            
+            'discount' => $ahorro
         ];
 
         $createCurrentQuote =  $currentQuote->currentQuoteDetails()->create($dataQuote);

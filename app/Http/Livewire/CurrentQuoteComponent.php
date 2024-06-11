@@ -257,12 +257,13 @@ class CurrentQuoteComponent extends Component
         $quoteCotizationNumber = [];
 
         foreach($cotizacionActual as $cotizacion){
-
+            
             $cotizacion_techniques = CurrentQuotesTechniques::where('current_quotes_details_id', $cotizacion->id)->get()->first();
 
             $product = Product::find($cotizacion->product_id);
             
-            $product->logo = $cotizacion->logo;       
+            $product->logo = $cotizacion->logo;    
+            $product->discount = $cotizacion->discount;   
 
             if($product){
                 $createQuote = new Quote(); 

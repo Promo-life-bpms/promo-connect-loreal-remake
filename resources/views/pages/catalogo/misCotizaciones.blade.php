@@ -9,16 +9,26 @@
         }
     </style>
         @php
+            $total_descuento = 0;
             $totalGeneral = 0;
+
             if($quotes != null){
                 foreach ($quotes as $quote){
                     $product = \App\Models\QuoteProducts::where('id', $quote->id)->get()->first();
 
                     $productImage = $product->firstImage;
-                    $totalGeneral += intval($product->precio_total);
 
+                    $totalGeneral += intval($product->precio_total);
+                    $producto_decode = json_decode($product->product);
+                    if(isset($producto_decode->discount)){
+                       
+                        $total_descuento = $total_descuento + $producto_decode->discount;
+                    }
+                    
                 }
             }
+
+            
            
         @endphp
 
@@ -51,7 +61,7 @@
             <div class="w-1/2">
                 <div class="bg-white p-4 rounded shadow">
                     <h2 class="text-xl font-bold mb-2">Total ahorrado: </h2>
-                    <p class="text-bold text-4xl">$ </p>
+                    <p class="text-bold text-4xl">$ {{ number_format($total_descuento,2) }}</p>
                 </div>
             </div>
         
@@ -60,8 +70,10 @@
             </div>
         </div>
 
-
         <br>
+
+      
+
         <div class="w-full">
             <table class="table-auto">
                 <thead>
@@ -79,6 +91,7 @@
                     </tr>
                 </thead>
                 <tbody>
+                   
                     @foreach ($quotes as $quote)
                         @php
                            
@@ -94,6 +107,8 @@
 
                             $productDB = \App\Models\Catalogo\Product::where('id',$productData->id)->get()->first();
                             $productImage = $productDB->firstImage;
+
+                            $producto_decode = json_decode($product->product);
 
                         @endphp
                         
@@ -117,7 +132,13 @@
                             <td class="text-center"> <b>$ {{ $product->precio_unitario}} </b>   </td>
                             <td class="text-center"> <b>
                                 $ {{ number_format($product->precio_total, 2, '.', ',') }} </b> 
-                                <p class="text-green-700 text-xs mt-1"> Ahorro: $ 0 </p>
+                                <p class="text-green-700 text-xs mt-1">
+                                    
+                                    @if(isset($producto_decode->discount))
+                                        Ahorro: $ {{ number_format(floatval($producto_decode->discount),2)  }}
+                                    @endif
+                               
+                                    </p>
                              </td>
                             <td class="text-center"> 
                                 <form method="POST" action="{{ route('downloadPDF') }}">

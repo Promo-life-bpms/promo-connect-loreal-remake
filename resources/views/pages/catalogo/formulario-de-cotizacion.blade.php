@@ -92,7 +92,7 @@
                 <br>
                 <input
                     class="grid grid-cols-3  w-full py-2 text-center rounded-lg ring-1 ring-inset placeholder:text-gray-300"
-                    type="number" name="cantidad" wire:model="cantidad" placeholder="Piezas" min="0"
+                    type="number" name="cantidad" wire:model="cantidad" placeholder="Piezas" min="0" required
                     max="{{ $product->stock }}">
             </div>
             <br>
@@ -319,6 +319,9 @@
     @endif
     <div class="justify-content-between  grid grid-cols-1">
         {{--  @if (!$priceScales) --}}
+        @php
+            $total_ahorro = 0;
+        @endphp
         <div>
             <h6 class="text-success"><strong>Precio Final por Articulo:</strong> $ {{ number_format($costoCalculado,2)}}</h6>
 
@@ -337,19 +340,19 @@
 
                                     @if($cantidad >= $item->escala_inicial)
                                         @php
-                                            $costo_anterior = $costoTotal * abs(($preciosDisponibles[$index - 1]->precio / ($preciosDisponibles[$index - 1]->escala_final)) - $item->precio) ;
+                                            $total_ahorro = $costoTotal * abs(($preciosDisponibles[$index - 1]->precio / ($preciosDisponibles[$index - 1]->escala_final)) - $item->precio) ;
                                         @endphp
                                         <b> 
-                                            $ {{ number_format($costo_anterior,2)  }}                          
+                                            $ {{ number_format($total_ahorro,2)  }}                          
                                         </b>
                                     @endif
                                 @else 
                                     @if($cantidad <= $item->escala_final && $cantidad >= $item->escala_inicial)
                                         @php
-                                            $costo_anterior = $costoTotal * abs(($preciosDisponibles[$index - 1]->precio / ($preciosDisponibles[$index - 1]->escala_final)) - $item->precio) ;
+                                            $total_ahorro = $costoTotal * abs(($preciosDisponibles[$index - 1]->precio / ($preciosDisponibles[$index - 1]->escala_final)) - $item->precio) ;
                                         @endphp
                                         <b> 
-                                            $ {{  number_format($costo_anterior,2) }}                          
+                                            $ {{  number_format($total_ahorro,2) }}                          
                                         </b>
                                     @endif
 
@@ -401,9 +404,11 @@
             @endif
         </div>
 
-        <button class="bg-primary hover:bg-primary-dark text-white py-3 col-span-4" wire:click="agregarCarrito()">
+        <button class="bg-primary hover:bg-primary-dark text-white py-3 col-span-4" wire:click="agregarCarrito({{ $total_ahorro }})">
             Agregar al carrito
         </button>
+
+
         @if (session()->has('message'))
             <div wire:poll.4s class="btn btn-sm btn-success w-100" style="margin-top:0px; margin-bottom:0px;">
                 {{ session('message') }} </div>
