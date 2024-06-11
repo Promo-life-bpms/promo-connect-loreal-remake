@@ -225,6 +225,27 @@
                                             <option value="LOGO_CERAVE_NEGRO.png">LOGO CERAVE NEGRO</option>
                                             <option value="LOGO_CERAVE_VERDE.png">LOGO CERAVE VERDE V1</option>
                                             <option value="LOGO_CERAVE_VERDE2.png">LOGO CERAVE VERDE V2</option>
+
+
+                                            <option value="LOGO_DERCOS.png">LOGO DERCOS</option>
+                                            <option value="LOGO_DERCOS_2.png">LOGO DERCOS 2</option>
+
+                                            <option value="LOGO_EFFACLAR_DUO.png">LOGO EFFACLAR DUO</option>
+
+                                            <option value="LOGO_GARNIER.png">LLOGO GARNIER</option>
+                                            <option value="LOGO_GARNIER_2.png">LOGO GARNIER 2</option>
+
+                                            <option value="LOGO_HERE_WE.png">LOGO HERE WE</option>
+                                            <option value="LOGO_HERE_WE_2.png">LOGO HERE WE 2</option>
+
+                                            <option value="LOGO_IT_COSMETICS.png">LOGO IT COSMETICS</option>
+                                            <option value="LOGO_LOREAL_1.png">LOGO LOREAL 1</option>
+                                            <option value="LOGO_LOREAL_2.png">LOGO LOREAL 2</option>
+                                            <option value="LOGO_LOREAL_3.png">LOGO LOREAL 3</option>
+                                            <option value="LOGO_LOREAL_4.png">LOGO LOREAL 4</option>
+                                            <option value="LOGO_LOREAL_5.png">LOGO LOREAL 5</option>
+                                            <option value="LOGO_LOREAL_ARBOL.png">LOGO LOREAL ARBOL</option>
+
                                         </select>
                                     </div>
                                     
@@ -471,6 +492,7 @@
         if(imageURL.startsWith("https://catalogodeproductos.promolife.lat/")){
             imageURL = imageURL.slice(41);
         }
+
         /* Logos */
         var logo1 = "{{asset('img/LOGO_CERAVE_AZUL.png')}}";
         var logo2 = "{{asset('img/LOGO_CERAVE_AZUL2.png')}}";
@@ -479,6 +501,21 @@
         var logo5 = "{{asset('img/LOGO_CERAVE_NEGRO.png')}}";
         var logo6 = "{{asset('img/LOGO_CERAVE_VERDE.png')}}";
         var logo7 = "{{asset('img/LOGO_CERAVE_VERDE2.png')}}";
+
+        var logo8 = "{{asset('img/LOGO_DERCOS.png')}}";
+        var logo9 = "{{asset('img/LOGO_DERCOS_2.png')}}";
+        var logo10 = "{{asset('img/LOGO_EFFACLAR_DUO.png')}}";
+        var logo11 = "{{asset('img/LOGO_GARNIER.png')}}";
+        var logo12 = "{{asset('img/LOGO_GARNIER_2.png')}}";
+        var logo13 = "{{asset('img/LOGO_HERE_WE.png')}}";
+        var logo14 = "{{asset('img/LOGO_HERE_WE_2.png')}}";
+        var logo15 = "{{asset('img/LOGO_IT_COSMETICS.png')}}";
+        var logo16 = "{{asset('img/LOGO_LOREAL_1.png')}}";
+        var logo17 = "{{asset('img/LOGO_LOREAL_2.png')}}";
+        var logo18 = "{{asset('img/LOGO_LOREAL_3.png')}}";
+        var logo19 = "{{asset('img/LOGO_LOREAL_4.png')}}";
+        var logo20 = "{{asset('img/LOGO_LOREAL_5.png')}}";
+        var logo21 = "{{asset('img/LOGO_LOREAL_ARBOL.png')}}";
 
         /* Identificadores */
         var selectedLogo1 = document.getElementById("logo1");
