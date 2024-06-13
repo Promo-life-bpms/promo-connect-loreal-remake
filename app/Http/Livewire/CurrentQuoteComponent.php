@@ -169,11 +169,12 @@ class CurrentQuoteComponent extends Component
                     $this->validate([
                         'logo' => 'required',
                     ]);
-                }
 
-                $filename = 'logo_' . time() . '.' . $this->logo->getClientOriginalExtension();
-                $ruta = $this->logo->storeAs('public/logos', $filename);
-                $path = 'storage/' . str_replace('public/', '', $ruta);
+                    $filename = 'logo_' . time() . '.' . $this->logo->getClientOriginalExtension();
+                    $ruta = $this->logo->storeAs('public/logos', $filename);
+                    $path = 'storage/' . str_replace('public/', '', $ruta);
+
+                }
 
                 $muestra = auth()->user()->sampleRequest()->create([
                     'address' => $this->type_sample == 'virtual con logotipo'? $path :  ($this->direccion == null? 'virtual':  $this->direccion),
