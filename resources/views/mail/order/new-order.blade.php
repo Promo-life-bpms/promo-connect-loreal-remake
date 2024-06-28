@@ -1,6 +1,6 @@
 @component('mail::message')
 
-# Orden de compra - Loreal
+# Confirmación de orden de compra - Loreal
 
 ---
 
@@ -47,4 +47,10 @@ Fecha: **{{ $date }}**
 
 ---
  
+- Condiciones de pago acordadas en el contrato
+- Precios unitarios mostrados antes de IVA
+- Precios mostrados en pesos mexicanos (MXN)
+- Una vez entregada la orden de compra y/o muestra física aprobada, la entrega de los productos se realizará en un plazo estimado de 10 días hábiles.
+- Antes de generar la orden de compra, le invitamos a verificar la disponibilidad actual de stock para garantizar la prontitud en el cumplimiento de su pedido.
+
 @endcomponent
