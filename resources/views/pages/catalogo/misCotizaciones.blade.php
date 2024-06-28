@@ -34,7 +34,7 @@
 
         @if(session('message'))
             <div class="bg-green-500 text-white p-4 mb-4">
-                <p class="text-lg">¡Éxito! Se ha iniciado el proceso de compra de tu producto, puedes checar el proceso en la sección <b>MIS COMPRAS</b> .</p>
+                <p class="text-lg">¡Éxito! tu cotización ha sido subida correctamente .</p>
             </div>
         @endif
         <div class="font-semibold text-slate-700 py-8 flex items-center space-x-2">
@@ -204,9 +204,25 @@
                 </tbody>
             </table>
            
+            <style>
+                .pagination-links ul {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 0.5rem;
+                }
+            
+                .pagination-links ul li {
+                    display: inline-block;
+                }
+
+                .page-item .active{
+                    background-color: red;
+                }
+            </style>
+            
             <div class="flex justify-end">
-                <div class="flex space-x-2 mt-2"> 
-                {{ $quotes->links() }}
+                <div class="pagination-links">
+                    {{ $quotes->links() }}
                 </div>
             </div>
             

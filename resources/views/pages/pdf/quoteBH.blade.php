@@ -12,7 +12,7 @@
   
     <header>
         <img src="img/header.png" alt="logo" style="width: 100%; z-index:1; position:absolute;">
-        <p style="margin-left:652px; margin-top:72px; z-index:2; color:#FFFFFF; font-size:12px;"><b>QS-001</b></p>
+        <p style="margin-left:652px; margin-top:72px; z-index:2; color:#FFFFFF; font-size:12px;"><b>QS</b></p>
 
         <p style="margin-left:672px; margin-top:2px; z-index:2; color:#FFFFFF; font-size:12px;"><b>{{$date}}</b></p>
             <div style="z-index:4; margin-top:20px;">
@@ -103,7 +103,9 @@
             @endphp
             
                 <br>
-                <p style="margin-left:60px;">Cotizacion: <b>SQ-{{ $quote->id }}</b></p>
+                <span style="margin-left:60px;margin-right:60px;">Cotizacion: <b>SQ-{{ $quote->id }}</b></span>
+                <span style="margin-left:220px;"><b style="color:#0225F4;margin-left:220px">Comprador:</b> {{$quote->user->name}}</span>
+
                 <table border="1" >
                     <tr>
                         <th style="width:30%" >Imagen de Referencia</th>

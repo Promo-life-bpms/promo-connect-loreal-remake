@@ -474,10 +474,10 @@ class CotizadorController extends Controller
     public function misCotizaciones()
     {
      
-        if(auth()->user()->hasRole( "buyers-manager")){
-            $quotes = Quote::simplePaginate(10);
-        }else{
-            $quotes =  auth()->user()->quotes()->simplePaginate(10);
+        if(auth()->user()->hasRole("buyers-manager") || auth()->user()->hasRole("seller")) {
+            $quotes = Quote::orderBy('created_at', 'desc')->paginate(10);
+        } else if(auth()->user()->hasRole("buyers-manager")) {
+            $quotes = auth()->user()->quotes()->orderBy('created_at', 'desc')->paginate(10);
         }
     
         return view('pages.catalogo.misCotizaciones', compact('quotes'));
