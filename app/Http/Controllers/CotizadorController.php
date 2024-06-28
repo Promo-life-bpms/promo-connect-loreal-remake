@@ -625,12 +625,18 @@ class CotizadorController extends Controller
                 'product' => json_encode($product)
             ]);
 
+            $getQuote = Quote::where('id',$quote->id)->get()->first();
+            $cotizacionUser = $getQuote->user->email;
             $userEmail = 'daniel@trademarket.com.mx'; 
             $date = Carbon::now()->format("d/m/Y");
             
             try {
                 Notification::route('mail', $userEmail)
                 ->notify(new OrderNotification($date, $quote));
+
+                Notification::route('mail', $cotizacionUser)
+                ->notify(new OrderNotification($date, $quote));
+
             } catch (\Throwable $th) {
                
             }
