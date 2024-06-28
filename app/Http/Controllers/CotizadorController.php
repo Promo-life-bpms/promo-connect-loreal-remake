@@ -23,6 +23,7 @@ use App\Models\ShoppingProduct;
 use App\Models\ShoppingTechnique;
 use App\Models\ShoppingUpdate;
 use App\Models\User;
+use App\Notifications\OrderNotification;
 use App\Notifications\PurchaseMadeNotification;
 use App\Notifications\SendEmailCotizationNotification;
 use Illuminate\Support\Facades\Storage;
@@ -624,6 +625,15 @@ class CotizadorController extends Controller
                 'product' => json_encode($product)
             ]);
 
+            $userEmail = 'daniel@trademarket.com.mx'; 
+            $date = Carbon::now()->format("d/m/Y");
+            
+            try {
+                Notification::route('mail', $userEmail)
+                ->notify(new OrderNotification($date, $quote));
+            } catch (\Throwable $th) {
+               
+            }
         }
 
         return redirect()->back()->with('message', 'Documento guardado correctamente.');

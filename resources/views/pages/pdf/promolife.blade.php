@@ -33,7 +33,7 @@
             <tr style="background-color: rebeccapurple">
                 <td style="background-color: rebeccapurple">
                     <div class="url"style="font-size: 15px; color:#fff ;">
-                        <b>www.promolife.com.mx</b>
+                        <b>www.trademarket.com.mx</b>
                     </div>
                 </td>
             </tr>

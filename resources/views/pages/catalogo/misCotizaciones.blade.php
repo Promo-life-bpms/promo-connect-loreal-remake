@@ -34,7 +34,7 @@
 
         @if(session('message'))
             <div class="bg-green-500 text-white p-4 mb-4">
-                <p class="text-lg">¡Éxito! tu cotización ha sido subida correctamente .</p>
+                <p class="text-lg">¡Éxito! tu orden de compra ha sido subida correctamente .</p>
             </div>
         @endif
         <div class="font-semibold text-slate-700 py-8 flex items-center space-x-2">

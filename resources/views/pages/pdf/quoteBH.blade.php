@@ -103,7 +103,7 @@
             @endphp
             
                 <br>
-                <span style="margin-left:60px;margin-right:60px;">Cotizacion: <b>SQ-{{ $quote->id }}</b></span>
+                <span style="margin-left:60px;margin-right:60px;"> <b style="margin-left:60px;color:#0225F4;">Cotizacion:</b> <b>SQ-{{ $quote->id }}</b></span>
                 <span style="margin-left:220px;"><b style="color:#0225F4;margin-left:220px">Comprador:</b> {{$quote->user->name}}</span>
 
                 <table border="1" >

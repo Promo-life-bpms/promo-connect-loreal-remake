@@ -1,6 +1,6 @@
 @component('mail::message')
 
-# Cotizacion 
+# Orden de compra - Loreal
 
 ---
 
@@ -20,16 +20,17 @@ Fecha: **{{ $date }}**
         $productData = json_decode($product->product);
 
         $productName = isset($productData->name) ? $productData->name : 'Nombre no disponible';
-        
             
     @endphp
 
-#Cotizacion: **SQ-{{ $quotes->id }}**
+# Se ha realizado la orden de compra para la cotización: 
 
-## Descripción
+# **SQ-{{ $quotes->id }}**
+
+## Descripción del pedido
 {{ $productName }}
 
-### Técnica de Personalización
+## Técnica de Personalización
 | Descripción                      | {{ isset($quotes->currentQuotesTechniques->technique) ? $quotes->currentQuotesTechniques->technique : '' }} |
 |----------------------------------|-------------------------------------------------------------------------------------------------------------------|
 | Material                         | {{ isset($quoteTechnique->material) ? $quoteTechnique->material : '' }}                                           |
@@ -37,7 +38,7 @@ Fecha: **{{ $date }}**
 
 **Tiempo de Entrega:** 10 días hábiles
 
-### Detalles del Producto
+## Detalles del Producto
 | Cantidad         | Precio Unitario  | Precio total      |
 |------------------|------------------|-------------------|
 | {{ $product->cantidad }} piezas | {{ $product->precio_unitario }} | {{ $product->precio_total }} |
@@ -45,10 +46,5 @@ Fecha: **{{ $date }}**
 ---
 
 ---
-
-Condiciones:
-- Condiciones de pago acordadas en el contrato
-- Precios unitarios mostrados antes de IVA
-- Precios mostrados en pesos mexicanos (MXP)
-
+ 
 @endcomponent

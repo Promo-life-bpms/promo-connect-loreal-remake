@@ -7,7 +7,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 
-class SendEmailCotizationNotification extends Notification
+class OrderNotification extends Notification
 {
     use Queueable;
     public $date, $quotes;
@@ -42,11 +42,11 @@ class SendEmailCotizationNotification extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
-            ->markdown('mail.cotization', [
+            ->markdown('mail.order.new-order', [
                 'date' =>  $this->date ,
                 'quotes' =>  $this->quotes 
             ])
-            ->subject('Cotización')
+            ->subject('Orden de compra')
             ->from('cotizaciones@trademarket.com.mx', 'Cotización');
     }
 
